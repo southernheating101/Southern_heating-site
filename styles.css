@@ -38,3 +38,43 @@ footer {
   background: #eee;
   color: #555;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+header {
+  background: #c53030;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  color: #c53030;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.services {
+  padding: 2rem;
+  background: #fff;
+}
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+.services li {
+  padding: 0.5rem 0;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+  color: #555;
+}
