@@ -1,80 +1,130 @@
-
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f9f9f9;
-  color: #333;
-}
-header {
-  background: #c53030;
-  color: white;
-  padding: 2rem;
-  text-align: center;
-}
-.cta {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background: #fff;
-  color: #c53030;
-  text-decoration: none;
-  border-radius: 8px;
-}
-.services {
-  padding: 2rem;
-  background: #fff;
-}
-.services ul {
-  list-style: none;
-  padding: 0;
-}
-.services li {
-  padding: 0.5rem 0;
-}
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #eee;
-  color: #555;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f9f9f9;
-  color: #333;
-}
 header {
-  background: #c53030;
-  color: white;
-  padding: 2rem;
-  text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
 }
-.cta {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background: #fff;
-  color: #c53030;
-  text-decoration: none;
-  border-radius: 8px;
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
 }
-.services {
-  padding: 2rem;
-  background: #fff;
+
+header .logo h1 {
+    margin: 0;
 }
-.services ul {
-  list-style: none;
-  padding: 0;
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
-.services li {
-  padding: 0.5rem 0;
+
+header nav ul li {
+    margin-left: 1em;
 }
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 5em 0;
+}
+
+#hero .btn {
+    background: #f00;
+    color: #fff;
+    padding: 0.5em 2em;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#services {
+    padding: 2em 0;
+    background: #f7f7f7;
+}
+
+#services .container {
+    text-align: center;
+}
+
+#services .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#services .service {
+    background: #fff;
+    padding: 1em;
+    margin: 1em;
+    flex: 1 1 calc(33.333% - 2em);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#about {
+    padding: 2em 0;
+}
+
+#contact {
+    padding: 2em 0;
+    background: #f7f7f7;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact form label {
+    display: block;
+    margin: 0.5em 0 0.2em;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+#contact form .btn {
+    background: #333;
+    color: #fff;
+    padding: 0.5em 2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 footer {
-  text-align: center;
-  padding: 1rem;
-  background: #eee;
-  color: #555;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+footer .social-media {
+    margin-top: 1em;
+}
+
+footer .social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.5em;
 }
