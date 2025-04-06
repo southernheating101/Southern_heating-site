@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Southern Heating Solutions</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="scripts.js"></script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="logo.png" alt="Southern Heating Solutions Logo">
+            <img src="images/logo.png" alt="Southern Heating Solutions Logo">
         </div>
         <nav>
             <ul>
@@ -30,27 +29,27 @@
         <section class="hero">
             <h2>Welcome to Southern Heating Solutions</h2>
             <p>Your trusted partner for all plumbing and boiler needs.</p>
-            <button onclick="scrollToSection('services')">Our Services</button>
+            <a href="services.html" class="button">Our Services</a>
         </section>
-        <section id="services" class="cards">
+        <section class="services">
             <h2>Our Services</h2>
-            <div class="card">
+            <div class="service-card">
                 <h3>Plumbing Services</h3>
                 <p>High-quality plumbing services for residential and commercial properties.</p>
                 <a href="services.html#plumbing" class="button">Learn More</a>
             </div>
-            <div class="card">
+            <div class="service-card">
                 <h3>Boiler Installation</h3>
                 <p>Professional boiler installation to ensure your home stays warm.</p>
                 <a href="services.html#boiler-installation" class="button">Learn More</a>
             </div>
-            <div class="card">
+            <div class="service-card">
                 <h3>Boiler Repair</h3>
                 <p>Expert boiler repair services to keep your system running smoothly.</p>
                 <a href="services.html#boiler-repair" class="button">Learn More</a>
             </div>
         </section>
-        <section id="testimonials" class="testimonials">
+        <section class="testimonials">
             <h2>Customer Testimonials</h2>
             <div class="testimonial">
                 <p>"Southern Heating Solutions provided exceptional service! Our boiler was installed quickly and efficiently."</p>
@@ -61,7 +60,7 @@
                 <p>- Jane Smith</p>
             </div>
         </section>
-        <section id="contact" class="contact">
+        <section class="contact">
             <h2>Contact Us</h2>
             <form action="#" method="post">
                 <label for="name">Name:</label>
