@@ -1,89 +1,167 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset default styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: #fff;
+}
+
+/* Header Styling */
 header {
-    background: #333;
-    color: #fff;
-    padding: 1em 0;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2em;
+    padding: 0 20px;
 }
 
-header .logo h1 {
-    margin: 0;
+header h1 {
+    font-size: 2em;
+    font-weight: bold;
 }
 
 header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
+    list-style: none;
 }
 
 header nav ul li {
-    margin-left: 1em;
+    margin-left: 20px;
 }
 
 header nav ul li a {
-    color: #fff;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+header nav ul li a:hover {
+    color: #f00;
+}
+
+header .btn {
+    background-color: #f00;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
     text-decoration: none;
 }
 
+header .btn:hover {
+    background-color: #ff4d4d;
+}
+
+/* Hero Section */
 #hero {
     background: url('hero-bg.jpg') no-repeat center center/cover;
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 5em 0;
+    padding: 150px 0;
+    position: relative;
+}
+
+#hero .hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
 }
 
 #hero .btn {
-    background: #f00;
-    color: #fff;
-    padding: 0.5em 2em;
-    text-decoration: none;
+    background-color: #f00;
+    padding: 10px 20px;
     border-radius: 5px;
+    color: white;
+    text-decoration: none;
 }
 
+#hero .btn:hover {
+    background-color: #ff4d4d;
+}
+
+/* Services Section */
 #services {
-    padding: 2em 0;
-    background: #f7f7f7;
+    padding: 60px 0;
+    background-color: #f7f7f7;
 }
 
-#services .container {
+#services h2 {
     text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
 }
 
 #services .service-list {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 #services .service {
-    background: #fff;
-    padding: 1em;
-    margin: 1em;
-    flex: 1 1 calc(33.333% - 2em);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(33.333% - 40px);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#services .service img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#services .service h3 {
+    font-size: 1.5em;
+}
+
+/* About Section */
+#about {
+    padding: 60px 20px;
     text-align: center;
 }
 
-#about {
-    padding: 2em 0;
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
 }
 
+#about p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
 #contact {
-    padding: 2em 0;
-    background: #f7f7f7;
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 #contact form {
@@ -93,38 +171,52 @@ header nav ul li a {
 
 #contact form label {
     display: block;
-    margin: 0.5em 0 0.2em;
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
 #contact form input,
 #contact form textarea {
     width: 100%;
-    padding: 0.5em;
-    margin-bottom: 1em;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 #contact form .btn {
-    background: #333;
-    color: #fff;
-    padding: 0.5em 2em;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
+    font-size: 1.1em;
     cursor: pointer;
 }
 
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
+#contact form .btn:hover {
+    background-color: #555;
 }
 
-footer .social-media {
-    margin-top: 1em;
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
 }
 
 footer .social-media a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    margin: 0 0.5em;
+    margin: 0 15px;
+    font-size: 1.5em;
+}
+
+footer .social-media a:hover {
+    color: #ff4d4d;
 }
