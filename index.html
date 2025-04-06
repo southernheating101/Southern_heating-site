@@ -3,85 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Southern Heating Solutions - Boiler repairs, heating services & 24/7 callouts in Surrey & Kingston">
+    <meta name="keywords" content="heating, boiler repair, plumbing, 24/7 callout">
+    <meta name="author" content="Southern Heating Solutions">
     <title>Southern Heating Solutions</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+
+<header>
+    <div class="container">
         <div class="logo">
-            <img src="images/logo.png" alt="Southern Heating Solutions Logo">
+            <h1>Southern Heating Solutions</h1>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="careers.html">Careers</a></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <h2>Welcome to Southern Heating Solutions</h2>
-            <p>Your trusted partner for all plumbing and boiler needs.</p>
-            <a href="services.html" class="button">Our Services</a>
-        </section>
-        <section class="services">
-            <h2>Our Services</h2>
-            <div class="service-card">
-                <h3>Plumbing Services</h3>
-                <p>High-quality plumbing services for residential and commercial properties.</p>
-                <a href="services.html#plumbing" class="button">Learn More</a>
+    </div>
+</header>
+
+<section id="hero">
+    <div class="hero-content">
+        <h2>Your Trusted Heating Experts</h2>
+        <p>Boiler repairs, heating services & 24/7 callouts in Surrey & Kingston</p>
+        <a href="mailto:support@southernheatingsolutions.co.uk?subject=Inquiry%20About%20Heating%20Services" class="btn">Email Us</a>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <div class="service">
+                <h3>Boiler Servicing & Repairs</h3>
+                <p>We provide fast, reliable boiler repairs and regular servicing to ensure your home stays warm and safe.</p>
             </div>
-            <div class="service-card">
-                <h3>Boiler Installation</h3>
-                <p>Professional boiler installation to ensure your home stays warm.</p>
-                <a href="services.html#boiler-installation" class="button">Learn More</a>
+            <div class="service">
+                <h3>Emergency Heating Callouts</h3>
+                <p>Available 24/7 for heating emergencies. Don’t let a broken boiler leave you in the cold.</p>
             </div>
-            <div class="service-card">
-                <h3>Boiler Repair</h3>
-                <p>Expert boiler repair services to keep your system running smoothly.</p>
-                <a href="services.html#boiler-repair" class="button">Learn More</a>
-            </div>
-        </section>
-        <section class="testimonials">
-            <h2>Customer Testimonials</h2>
-            <div class="testimonial">
-                <p>"Southern Heating Solutions provided exceptional service! Our boiler was installed quickly and efficiently."</p>
-                <p>- John Doe</p>
-            </div>
-            <div class="testimonial">
-                <p>"The plumbing services were top-notch. Highly recommend Southern Heating Solutions."</p>
-                <p>- Jane Smith</p>
-            </div>
-        </section>
-        <section class="contact">
-            <h2>Contact Us</h2>
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Southern Heating Solutions. All rights reserved.</p>
-            <div class="social-media">
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
+            <div class="service">
+                <h3>Central Heating Installation</h3>
+                <p>We offer expert central heating installation for both new builds and upgrades to existing systems.</p>
             </div>
         </div>
-    </footer>
-</body>
-</html>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required
