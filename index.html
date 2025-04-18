@@ -1,214 +1,215 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html><html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Southern Heating Solutions – Reliable Plumbing & Heating Services</title>
-    <meta
-      name="description"
-      content="Serving homes and businesses across the South with 24/7 emergency call‑outs. Get a free quote for boiler installation, plumbing and heating services."
-    /><!-- Tailwind CSS (CDN) -->
+    <title>Southern Heating Solutions | Plumbing & Heating Engineers</title>
+    <meta name="description" content="Gas‑Safe registered engineers providing boiler installations, plumbing, heating maintenance and 24/7 emergency call‑outs across the South of England." /><!-- Google Fonts (Inter) -->
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Tailwind CSS (CDN build with brand colour config) -->
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ["Inter", "ui-sans-serif", "system-ui"],
+        },
+        colors: {
+          brand: {
+            light: "#00b4f0", // British Gas‑like light blue
+            DEFAULT: "#009de0", // primary brand blue
+            dark: "#005ea5", // darker accent
+          },
+        },
+      },
+    },
+  };
+</script>
 <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Custom fade‑in animation (light replacement for Framer Motion) -->
+<!-- Alpine.js for small interactions (mobile nav, form toast) -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<!-- Favicon placeholder -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='%23009de0' d='M32 2l8 24h22L42 42l8 24-18-14-18 14 8-24L2 26h22z'/></svg>" />
+
 <style>
   body {
-    font-family: 'Inter', sans-serif;
+    font-feature-settings: "liga" on, "calt" on;
   }
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.6s forwards;
-  }
-  @keyframes fadeUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  /* simple fade‑in */
+  .fade-up { opacity: 0; transform: translateY(30px); }
+  .fade-up.triggered { opacity: 1; transform: translateY(0); transition: all 0.7s ease-out; }
 </style>
 
-  </head>  <body class="font-sans antialiased text-gray-800">
-    <!-- ---------- HEADER ---------- -->
-    <header class="bg-white shadow">
-      <div
-        class="container mx-auto flex items-center justify-between px-6 py-4"
-      >
-        <h1 class="text-2xl font-bold">
-          Southern&nbsp;Heating&nbsp;Solutions
-        </h1><nav>
-      <ul class="flex gap-6 text-lg font-medium">
-        <li><a href="#services" class="hover:text-sky-600">Services</a></li>
-        <li><a href="#about" class="hover:text-sky-600">About</a></li>
-        <li>
-          <a href="#testimonials" class="hover:text-sky-600">Testimonials</a>
-        </li>
-        <li><a href="#contact" class="hover:text-sky-600">Contact</a></li>
-      </ul>
+  </head>
+  <body class="font-sans antialiased text-gray-800 bg-white" x-data="{navOpen:false, showToast:false}" x-init="// intersection observer for fade‑in\n      const observer=new IntersectionObserver(e=>e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('triggered');}}),{threshold:0.1});\n      document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));"><!-- ========== HEADER ========= -->
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur shadow-sm">
+  <div class="container mx-auto flex items-center justify-between py-3 px-4 md:px-6">
+    <!-- Logo  -->
+    <a href="#" class="flex items-center gap-2 text-brand font-semibold text-lg">
+      <!-- Inline SVG logo (flame + pipe) -->
+      <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 2C20 14 16 24 16 32c0 11 7 18 16 18s16-7 16-18c0-8-4-18-16-30z" fill="#00b4f0" />
+        <circle cx="32" cy="40" r="6" fill="#005ea5" />
+      </svg>
+      Southern Heating Solutions
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex gap-8 font-medium">
+      <a href="#services" class="hover:text-brand">Services</a>
+      <a href="#about" class="hover:text-brand">About</a>
+      <a href="#testimonials" class="hover:text-brand">Testimonials</a>
+      <a href="#contact" class="hover:text-brand">Contact</a>
     </nav>
+
+    <!-- Mobile hamburger -->
+    <button @click="navOpen=!navOpen" class="md:hidden text-brand dark:text-white focus:outline-none">
+      <svg x-show="!navOpen" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <svg x-show="navOpen" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
   </div>
+  <!-- Mobile dropdown -->
+  <nav x-show="navOpen" x-transition class="md:hidden bg-white shadow-inner">
+    <ul class="flex flex-col text-center py-4 space-y-2">
+      <li><a @click="navOpen=false" href="#services" class="block py-2 hover:bg-gray-100">Services</a></li>
+      <li><a @click="navOpen=false" href="#about" class="block py-2 hover:bg-gray-100">About</a></li>
+      <li><a @click="navOpen=false" href="#testimonials" class="block py-2 hover:bg-gray-100">Testimonials</a></li>
+      <li><a @click="navOpen=false" href="#contact" class="block py-2 hover:bg-gray-100">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
-<!-- ---------- HERO ---------- -->
-<section id="hero" class="bg-gray-50 text-center py-20 px-6">
-  <h2
-    class="fade-in text-4xl md:text-5xl font-semibold leading-tight mb-4"
-  >
-    Reliable&nbsp;Plumbing&nbsp;&amp;&nbsp;Heating&nbsp;Services
-  </h2>
-  <p class="mb-8 text-lg max-w-2xl mx-auto">
-    Serving homes and businesses across the South with&nbsp;24/7 emergency
-    call‑outs.
-  </p>
-  <a
-    href="#contact"
-    class="inline-block bg-sky-600 hover:bg-sky-700 text-white text-lg rounded-xl px-8 py-3 transition"
-  >
-    Get&nbsp;a&nbsp;Free&nbsp;Quote
-  </a>
+<!-- ========== HERO ========= -->
+<section class="relative min-h-[75vh] flex items-center justify-center text-center overflow-hidden">
+  <!-- Background gradient  -->
+  <div class="absolute inset-0 bg-gradient-to-br from-brand via-brand-dark to-gray-900 opacity-90"></div>
+  <!-- Decorative SVG wave -->
+  <svg class="absolute bottom-0 w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 75" preserveAspectRatio="none"><path fill="#ffffff" d="M0,32L48,42.7C96,53,192,75,288,74.7C384,75,480,53,576,37.3C672,21,768,11,864,21.3C960,32,1056,64,1152,85.3C1248,107,1344,117,1392,122.7L1440,128L1440,160L1392,160C1344,160,1248,160,1152,160C1056,160,960,160,864,160C768,160,672,160,576,160C480,160,384,160,288,160C192,160,96,160,48,160L0,160Z"></path></svg>
+  <!-- Content  -->
+  <div class="relative z-10 px-4 max-w-2xl text-white space-y-6 fade-up">
+    <h1 class="text-4xl sm:text-5xl font-bold leading-tight">Reliable Plumbing & Heating Services</h1>
+    <p class="text-lg sm:text-xl">Serving homes & businesses across the South with 24/7 emergency call‑outs and industry‑leading warranties.</p>
+    <a href="#contact" class="inline-block bg-white text-brand-dark font-semibold px-8 py-3 rounded-full shadow hover:shadow-lg transform hover:-translate-y-0.5 transition">Get a Free Quote</a>
+  </div>
 </section>
 
-<!-- ---------- MAIN ---------- -->
-<main>
-  <!-- -------- Services -------- -->
-  <section id="services" class="py-16 bg-white">
-    <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-bold mb-10 text-center">
-        Our&nbsp;Services
-      </h3>
-      <div class="grid gap-8 md:grid-cols-3">
-        <div class="shadow-lg rounded-2xl p-6 bg-white">
-          <h4 class="text-xl font-semibold mb-2">Boiler Installation</h4>
-          <p>
-            Energy‑efficient boiler upgrades with up to 10‑year warranties.
-          </p>
+<!-- ========== SERVICES ========= -->
+<section id="services" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 fade-up">Our Services</h2>
+    <div class="grid gap-8 md:grid-cols-3">
+      <!-- Service Card template -->
+      <template x-for="service in [
+        {title:'Boiler Installations',desc:'Energy‑efficient boiler upgrades with up to 12‑year warranties.',icon:'🔥'},
+        {title:'General Plumbing',desc:'Leaky taps, burst pipes, bathroom refits – no job too small.',icon:'🔧'},
+        {title:'24/7 Emergencies',desc:'Rapid response teams for breakdowns and heating failures.',icon:'⚡'}
+      ]" :key="service.title">
+        <div class="fade-up bg-white rounded-2xl shadow-lg p-8 text-center space-y-4">
+          <div class="text-4xl"> <span x-text="service.icon"></span> </div>
+          <h3 class="text-xl font-semibold" x-text="service.title"></h3>
+          <p x-text="service.desc"></p>
         </div>
-        <div class="shadow-lg rounded-2xl p-6 bg-white">
-          <h4 class="text-xl font-semibold mb-2">General Plumbing</h4>
-          <p>Leaky taps, burst pipes, bathroom refits – no job too small.</p>
-        </div>
-        <div class="shadow-lg rounded-2xl p-6 bg-white">
-          <h4 class="text-xl font-semibold mb-2">24/7 Emergencies</h4>
-          <p>Rapid response for boiler breakdowns and heating failures.</p>
-        </div>
-      </div>
+      </template>
     </div>
-  </section>
-
-  <!-- -------- About -------- -->
-  <section id="about" class="py-16 bg-gray-50">
-    <div class="container mx-auto px-6 md:flex md:items-center md:gap-12">
-      <img
-        src="https://images.unsplash.com/photo-1600585154340-be6161cd022b?auto=format&fit=crop&w=740&q=80"
-        alt="Gas Safe engineer repairing a boiler"
-        class="fade-in w-full md:w-1/2 rounded-2xl shadow-lg mb-8 md:mb-0 object-cover"
-        width="600"
-        height="400"
-      />
-      <div class="md:w-1/2">
-        <h3 class="text-3xl font-bold mb-4">Why Choose Us?</h3>
-        <ul class="space-y-3 text-lg list-disc list-inside">
-          <li>Gas Safe Registered engineers</li>
-          <li>Transparent, upfront pricing</li>
-          <li>5‑star customer service</li>
-          <li>Locally owned &amp; operated</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- -------- Testimonials -------- -->
-  <section id="testimonials" class="py-16 bg-white">
-    <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-bold mb-10 text-center">
-        Customer Reviews
-      </h3>
-      <div class="grid gap-8 md:grid-cols-2">
-        <div class="shadow-xl rounded-2xl p-6 bg-white">
-          <p class="italic mb-4">
-            “Southern Heating Solutions replaced our old boiler in a day and
-            left everything spotless. Highly recommended!”
-          </p>
-          <span class="font-semibold">— Sarah J., Southampton</span>
-        </div>
-        <div class="shadow-xl rounded-2xl p-6 bg-white">
-          <p class="italic mb-4">
-            “Fast emergency call‑out on a Sunday evening. Lifesavers!”
-          </p>
-          <span class="font-semibold">— Mark T., Portsmouth</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- -------- Contact -------- -->
-  <section id="contact" class="py-16 bg-gray-50">
-    <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-bold mb-6 text-center">Request a Quote</h3>
-      <div class="max-w-2xl mx-auto">
-        <form class="space-y-4">
-          <input
-            type="text"
-            placeholder="Your Name"
-            required
-            class="w-full border rounded-lg px-4 py-3"
-          />
-          <input
-            type="email"
-            placeholder="Email Address"
-            required
-            class="w-full border rounded-lg px-4 py-3"
-          />
-          <input
-            type="tel"
-            placeholder="Phone Number"
-            required
-            class="w-full border rounded-lg px-4 py-3"
-          />
-          <textarea
-            placeholder="Tell us about the job…"
-            rows="5"
-            required
-            class="w-full border rounded-lg px-4 py-3"
-          ></textarea>
-          <button
-            type="submit"
-            class="w-full bg-sky-600 hover:bg-sky-700 text-white text-lg rounded-xl px-8 py-3 transition"
-          >
-            Send Message
-          </button>
-        </form>
-        <p class="text-center mt-6">
-          Or call us 24/7 on
-          <a href="tel:0800123456" class="text-sky-600 font-medium"
-            >0800 123 456</a
-          >
-        </p>
-      </div>
-    </div>
-  </section>
-</main>
-
-<!-- ---------- FOOTER ---------- -->
-<footer class="bg-gray-800 text-gray-300 py-8">
-  <div class="container mx-auto px-6 text-center space-y-2">
-    <p>
-      &copy; <span id="year"></span> Southern Heating Solutions. All rights
-      reserved.
-    </p>
-    <p>
-      Gas Safe Registration No.&nbsp;123456&nbsp;|&nbsp;<a
-        href="#"
-        class="underline hover:text-white"
-        >Privacy Policy</a
-      >
-    </p>
   </div>
+</section>
+
+<!-- ========== ABOUT ========= -->
+<section id="about" class="py-20">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+    <img src="https://images.unsplash.com/photo-1581091714505-7aa321a97515?auto=format&fit=crop&w=800&q=60" alt="Engineer servicing a boiler" class="fade-up w-full md:w-1/2 rounded-3xl shadow-xl object-cover" loading="lazy"/>
+    <div class="md:w-1/2 space-y-6 fade-up">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Why Choose Southern?</h2>
+      <ul class="space-y-4 text-lg list-disc list-inside">
+        <li>Gas Safe Registered & fully insured engineers</li>
+        <li>Upfront, transparent pricing with no hidden fees</li>
+        <li>5‑star customer satisfaction on Trustpilot</li>
+        <li>Eco‑friendly installations meeting the latest standards</li>
+        <li>Local expertise backed by nationwide buying power</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========= -->
+<section id="testimonials" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 fade-up">Customer Reviews</h2>
+    <div class="grid gap-8 md:grid-cols-2">
+      <template x-for="review in [
+        {quote:'Southern Heating replaced our boiler in one day and left the place spotless. Couldn\'t ask for better service!',name:'Sarah J., Southampton'},
+        {quote:'Fast emergency call‑out on a Sunday evening – genuine lifesavers!',name:'Mark T., Portsmouth'},
+        {quote:'Professional, polite, and competitively priced. Highly recommended.',name:'Priya K., Bournemouth'},
+        {quote:'Excellent workmanship and clear communication from start to finish.',name:'Lewis H., Winchester'}
+      ]" :key="review.name">
+        <figure class="bg-white rounded-2xl shadow-xl p-8 fade-up">
+          <blockquote class="italic leading-relaxed mb-4">“<span x-text="review.quote"></span>”</blockquote>
+          <figcaption class="font-semibold">— <span x-text="review.name"></span></figcaption>
+        </figure>
+      </template>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT ========= -->
+<section id="contact" class="py-20">
+  <div class="container mx-auto px-4 max-w-2xl">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 fade-up">Request a Quote</h2>
+    <form @submit.prevent="showToast=true; $nextTick(()=>setTimeout(()=>showToast=false,4000))" class="space-y-6 fade-up">
+      <div class="grid sm:grid-cols-2 gap-6">
+        <input type="text" placeholder="Your Name" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand focus:outline-none" />
+        <input type="email" placeholder="Email Address" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand focus:outline-none" />
+      </div>
+      <input type="tel" placeholder="Phone Number" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand focus:outline-none" />
+      <textarea placeholder="Tell us about the job…" rows="5" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand focus:outline-none"></textarea>
+      <button type="submit" class="w-full bg-brand hover:bg-brand-dark text-white text-lg font-semibold px-8 py-3 rounded-full shadow hover:shadow-lg transform hover:-translate-y-0.5 transition">Send Message</button>
+    </form>
+    <p class="text-center mt-8">Or call us 24/7 on <a href="tel:0800123456" class="text-brand font-medium">0800 123 456</a></p>
+
+    <!-- Toast -->
+    <div x-show="showToast" x-transition class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-brand text-white px-6 py-4 rounded-full shadow-lg">
+      Thank you! We'll be in touch shortly.
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========= -->
+<footer class="bg-gray-900 text-gray-300 py-10">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row md:justify-between gap-8">
+    <div>
+      <a href="#" class="flex items-center gap-2 text-brand-light font-semibold text-lg mb-4">
+        <svg width="28" height="28" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32 2C20 14 16 24 16 32c0 11 7 18 16 18s16-7 16-18c0-8-4-18-16-30z" fill="#00b4f0" /><circle cx="32" cy="40" r="6" fill="#009de0" /></svg>
+        Southern Heating Solutions
+      </a>
+      <p class="max-w-xs text-sm leading-relaxed">Experts in boiler installations, plumbing and energy‑efficient heating systems since 2005.</p>
+    </div>
+    <nav class="text-sm flex gap-8 flex-wrap">
+      <div class="space-y-2">
+        <h3 class="uppercase font-semibold text-gray-400 tracking-wide">Company</h3>
+        <a href="#services" class="block hover:text-white">Services</a>
+        <a href="#about" class="block hover:text-white">About</a>
+        <a href="#consultation" class="block hover:text-white">Book Consultation</a>
+      </div>
+      <div class="space-y-2">
+        <h3 class="uppercase font-semibold text-gray-400 tracking-wide">Legal</h3>
+        <a href="#" class="block hover:text-white">Privacy Policy</a>
+        <a href="#" class="block hover:text-white">Terms & Conditions</a>
+      </div>
+      <div class="space-y-2">
+        <h3 class="uppercase font-semibold text-gray-400 tracking-wide">Connect</h3>
+        <a href="mailto:info@southernheating.co.uk" class="block hover:text-white">info@southernheating.co.uk</a>
+        <span>0800 123 456</span>
+      </div>
+    </nav>
+  </div>
+  <div class="text-center text-xs text-gray-500 mt-8">&copy; <span id="year"></span> Southern Heating Solutions. All rights reserved. Gas Safe Reg No. 123456.</div>
 </footer>
 
-<!-- Keep the year automatic -->
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+<!-- Dynamic year -->
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
   </body>
 </html>
