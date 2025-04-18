@@ -1,157 +1,243 @@
- <!DOCTYPE html><html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Southern Heating Solutions</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0z4oQ5ezs3C1hQczP3BXQeO8Y2Xt9h8myIJwTyMGRU2haX" crossorigin="anonymous">
-  <style>
+  <meta name="description" content="Premium plumbing & heating services across the South. 20+ years of expertise—fast, reliable, eco-friendly solutions." />
+  <link rel="icon" href="/favicon.ico" />  <!-- Preload Fonts -->  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />  <!-- AOS for scroll animations -->  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Swiper for testimonials slider -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />  <style>
+    /* Variables */
     :root {
-      --color-primary: #004c6d;
-      --color-secondary: #f4a261;
-      --color-accent: #e76f51;
-      --text-heading: 'Montserrat', sans-serif;
-      --text-body: 'Open Sans', sans-serif;
+      --primary: #004c6d;
+      --secondary: #f4a261;
+      --accent: #e76f51;
+      --bg: #fafafa;
+      --heading-font: 'Montserrat', sans-serif;
+      --body-font: 'Open Sans', sans-serif;
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--text-body); color: #333; line-height: 1.6; background: #fafafa; }
-    a { text-decoration: none; color: inherit; }/* Header */
-header { background-color: var(--color-primary); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; }
-.logo { display: flex; align-items: center; font-family: var(--text-heading); color: #fff; }
-.logo i { font-size: 1.8rem; margin-right: 10px; color: var(--color-secondary); }
-.logo span { font-size: 1.4rem; font-weight: 700; }
-nav ul { display: flex; list-style: none; }
-nav li { margin-left: 30px; }
-nav a { color: #fff; font-weight: 600; transition: color 0.3s; }
-nav a:hover { color: var(--color-secondary); }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--body-font); background: var(--bg); color: #333; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    button { font-family: inherit; cursor: pointer; }
 
-/* Hero */
-.hero { position: relative; background: url('https://via.placeholder.com/1600x600?text=Southern+Heating+Solutions') center/cover no-repeat; height: 600px; display: flex; align-items: center; }
-.hero::before { content: ""; position: absolute; inset: 0; background: rgba(0, 76, 109, 0.6); }
-.hero-content { position: relative; color: #fff; text-align: center; width: 100%; }
-.hero-content h1 { font-family: var(--text-heading); font-size: 3rem; margin-bottom: 20px; }
-.hero-content p { font-size: 1.1rem; margin-bottom: 30px; }
-.btn { display: inline-block; background: var(--color-secondary); color: #fff; padding: 12px 30px; border-radius: 5px; font-weight: 600; transition: background 0.3s; }
-.btn:hover { background: var(--color-accent); }
+    /* Layout */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    header, footer { width: 100%; }
 
-/* Sections */
-section { padding: 80px 0; }
-h2 { font-family: var(--text-heading); font-size: 2rem; color: var(--color-primary); text-align: center; margin-bottom: 40px; }
+    /* Header */
+    header { background: #fff; position: fixed; top: 0; width: 100%; z-index: 999; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; }
+    .logo svg { height: 40px; width: 40px; }
+    .logo-text { font-family: var(--heading-font); font-weight: 700; font-size: 1.4rem; color: var(--primary); margin-left: 10px; }
+    nav ul { display: flex; list-style: none; }
+    nav li { margin-left: 30px; }
+    nav a { font-weight: 600; color: var(--primary); transition: color 0.3s; }
+    nav a:hover { color: var(--secondary); }
 
-/* Services */
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
-.service-card { background: #fff; padding: 30px; border-radius: 8px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: transform 0.3s; }
-.service-card:hover { transform: translateY(-8px); }
-.service-card i { font-size: 2.5rem; margin-bottom: 20px; color: var(--color-primary); }
-.service-card h3 { font-family: var(--text-heading); font-size: 1.4rem; margin-bottom: 15px; }
-.service-card p { font-size: 1rem; color: #555; }
+    /* Hero */
+    .hero {
+      height: 90vh;
+      background: url('https://via.placeholder.com/1600x900?text=High-Performance+Heating') center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      animation: fadeIn 1.2s ease forwards;
+    }
+    .hero-content {
+      position: relative;
+      text-align: center;
+      color: #fff;
+      max-width: 800px;
+      z-index: 1;
+    }
+    .hero-content h1 {
+      font-family: var(--heading-font);
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: slideUp 1s ease forwards;
+    }
+    .hero-content p { font-size: 1.1rem; margin-bottom: 30px; opacity: 0; animation: fadeInText 1s 0.6s ease forwards; }
+    .btn { display: inline-block; background: var(--secondary); color: #fff; padding: 12px 30px; border-radius: 5px; font-weight: 600; transition: background 0.3s, transform 0.2s; }
+    .btn:hover { background: var(--accent); transform: translateY(-2px); }
 
-/* About */
-.about-content { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
-.about-text { flex: 1; }
-.about-text p { margin-top: 15px; font-size: 1rem; color: #555; }
-.about-image { flex: 1; text-align: right; }
-.about-image img { border-radius: 8px; }
+    /* Sections */
+    section { padding: 100px 0; scroll-snap-align: start; }
+    main { scroll-snap-type: y mandatory; }
+    h2 { font-family: var(--heading-font); font-size: 2rem; color: var(--primary); text-align: center; margin-bottom: 40px; }
 
-/* Contact Form */
-.contact-form { max-width: 600px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-.contact-form label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 0.9rem; }
-.contact-form input,
-.contact-form textarea { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; }
-.contact-form button { width: 100%; }
+    /* Services */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
+    .service-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      transform-style: preserve-3d;
+    }
+    .service-card:hover {
+      transform: rotateX(5deg) translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .service-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+    .service-card h3 { font-family: var(--heading-font); font-size: 1.4rem; margin-bottom: 15px; }
+    .service-card p { color: #555; line-height: 1.5; }
 
-/* Footer */
-footer { background: var(--color-primary); color: #fff; text-align: center; padding: 30px 20px; }
-footer p { margin-bottom: 10px; font-size: 0.9rem; }
-footer a { color: var(--color-secondary); font-weight: 600; }
+    /* About */
+    .about-content { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+    .about-text { flex: 1; }
+    .about-text p { margin-top: 15px; color: #555; line-height: 1.6; }
+    .about-image { flex: 1; text-align: right; }
+    .about-image img { border-radius: 8px; }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero { height: 450px; }
-  .hero-content h1 { font-size: 2.4rem; }
-  .about-content { flex-direction: column; text-align: center; }
-  .about-image { text-align: center; }
-  nav ul { flex-direction: column; }
-  nav li { margin: 15px 0; }
-}
+    /* Testimonials */
+    .swiper-container { width: 100%; padding: 40px 0; }
+    .swiper-slide { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 6px 15px rgba(0,0,0,0.05); }
+    .testimonial-text { font-style: italic; margin-bottom: 20px; }
+    .testimonial-author { font-weight: 600; color: var(--primary); }
 
-  </style>
-</head>
+    /* Contact */
+    .contact-form { max-width: 600px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 6px 15px rgba(0,0,0,0.05); }
+    .contact-form label { display: block; font-weight: 600; margin-bottom: 5px; }
+    .contact-form input,
+    .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; }
+    .contact-form button { width: 100%; }
+
+    /* Footer */
+    footer { background: var(--primary); color: #fff; text-align: center; padding: 30px 20px; }
+    footer a { color: var(--secondary); font-weight: 600; }
+
+    /* Animations */
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    @keyframes slideUp { from {opacity:0; transform: translateY(20px);} to {opacity:1; transform: translateY(0);} }
+    @keyframes fadeInText { from {opacity:0;} to {opacity:1;} }
+  </style></head>
 <body>
   <!-- Header -->
   <header>
     <div class="container header-inner">
-      <a href="#home" class="logo"><i class="fas fa-fire"></i><span>Southern Heating Solutions</span></a>
-      <nav>
+      <a href="#home" class="logo" aria-label="Southern Heating Solutions"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path fill="var(--secondary)" d="M32 2c-8 10-18 18-18 32a18 18 0 0036 0C50 20 40 12 32 2z"/></svg><span class="logo-text">Southern Heating</span></a>
+      <nav role="navigation">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
-  </header>  <!-- Hero Section -->  <section class="hero" id="home">
-    <div class="hero-content container">
-      <h1>Your Trusted Plumbing & Heating Experts</h1>
-      <p>Delivering reliable, efficient, and affordable heating solutions across the South for over 20 years.</p>
-      <a href="#contact" class="btn">Get a Quote</a>
-    </div>
-  </section>  <!-- Services Section -->  <section id="services">
-    <div class="container">
-      <h2>Our Professional Services</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <i class="fas fa-wrench"></i>
-          <h3>Expert Plumbing Repair</h3>
-          <p>Swift diagnostics and lasting repairs for leaks, clogs, and pipe issues.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-fire"></i>
-          <h3>Heating System Installation</h3>
-          <p>Customized installations of high-efficiency furnaces, boilers, and heat pumps.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-tools"></i>
-          <h3>Scheduled Maintenance</h3>
-          <p>Preventive tune-ups to ensure optimal performance and longevity.</p>
-        </div>
+  </header>  <main role="main">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content container" data-aos="fade-up">
+        <h1>Your Trusted Plumbing & Heating Experts</h1>
+        <p>Delivering fast, clean, and eco-friendly solutions for over 20 years.</p>
+        <a href="#contact" class="btn">Request a Free Quote</a>
+      </div>
+    </section><!-- Services Section -->
+<section id="services" data-aos="fade-up">
+  <div class="container">
+    <h2>Our Core Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-wrench"></i>
+        <h3>Advanced Plumbing Repair</h3>
+        <p>Rapid diagnosis with camera inspection & permanent fixes for any issue.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-fire"></i>
+        <h3>Smart Heating Installation</h3>
+        <p>Energy-efficient systems with smart controls to lower your bills.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-tools"></i>
+        <h3>Preventative Maintenance</h3>
+        <p>Year-round tune-ups to maximize system lifespan and reliability.</p>
       </div>
     </div>
-  </section>  <!-- About Section -->  <section id="about">
-    <div class="container about-content">
-      <div class="about-text">
-        <h2>Who We Are</h2>
-        <p>At Southern Heating Solutions, we combine two decades of industry expertise with a commitment to excellence. Our certified technicians deliver transparent pricing, professional workmanship, and unparalleled customer service on every job.</p>
-      </div>
-      <div class="about-image">
-        <img src="https://via.placeholder.com/500x350?text=Professional+Team" alt="Our professional team at work">
-      </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" data-aos="fade-up">
+  <div class="container about-content">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>Southern Heating Solutions blends two decades of expertise with cutting-edge technology. Our fully licensed team uses eco-friendly products and transparent pricing—no surprises, ever.</p>
     </div>
-  </section>  <!-- Contact Section -->  <section id="contact">
-    <div class="container">
-      <h2>Get In Touch</h2>
-      <form class="contact-form" action="#" method="POST">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your full name" required>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your email address" required>
-        <label for="phone">Phone</label>
-        <input type="tel" id="phone" name="phone" placeholder="Your phone number">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="How can we assist you?" required></textarea>
-        <button type="submit" class="btn">Submit</button>
-      </form>
+    <div class="about-image">
+      <img src="https://via.placeholder.com/500x350?text=Our+Team+in+Action" alt="Our certified technicians at work" loading="lazy">
     </div>
-  </section>  <!-- Footer -->  <footer>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" data-aos="fade-up">
+  <div class="container">
+    <h2>What Our Clients Say</h2>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <p class="testimonial-text">“Southern Heating replaced our old boiler in under a day. Their team was punctual, professional, and clean—highly recommend!”</p>
+          <p class="testimonial-author">— Emily R.</p>
+        </div>
+        <div class="swiper-slide">
+          <p class="testimonial-text">“Fast leak repair with camera inspection. No mess, no fuss. Will call them for annual maintenance!”</p>
+          <p class="testimonial-author">— Jason M.</p>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" data-aos="fade-up">
+  <div class="container">
+    <h2>Get In Touch</h2>
+    <form class="contact-form" action="#" method="POST" aria-label="Contact Form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email address" required>
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help" required></textarea>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+</section>
+
+  </main>  <!-- Footer -->  <footer>
     <div class="container">
       <p>© 2025 Southern Heating Solutions. All Rights Reserved.</p>
-      <p><a href="tel:+18001234567">+1 (800) 123-4567</a> | <a href="mailto:info@southernheating.com">info@southernheating.com</a></p>
+      <p><a href="tel:+18001234567">(800) 123-4567</a> | <a href="mailto:info@southernheating.com">info@southernheating.com</a></p>
     </div>
-  </footer>
-</body>
+  </footer>  <!-- Scripts -->  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({ duration: 800, once: true });
+      gsap.from('.logo', { opacity: 0, y: -20, duration: 1 });
+      gsap.from('.hero-content h1', { opacity: 0, y: 30, duration: 1, delay: 0.5 });
+      new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: { delay: 5000 },
+        pagination: { el: '.swiper-pagination', clickable: true },
+      });
+    });
+  </script></body>
 </html>
