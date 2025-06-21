@@ -3,49 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Southern Heating Solutions</title>
+  <title>Maintenance | Southern Heating Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #002855;
-      color: white;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #061e40;
+      color: #ffffff;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      text-align: center;
+      justify-content: center;
       min-height: 100vh;
+      text-align: center;
+    }
+
+    .container {
       padding: 20px;
+      max-width: 480px;
     }
-    img {
-      max-width: 200px;
-      margin-bottom: 20px;
+
+    .logo {
+      width: 160px;
+      margin-bottom: 30px;
+      animation: dropIn 0.9s ease;
     }
+
     h1 {
-      font-size: 2rem;
+      font-size: 1.9em;
       margin-bottom: 10px;
     }
+
     p {
-      font-size: 1.1rem;
+      font-size: 1.05em;
+      line-height: 1.6;
+      margin-bottom: 25px;
     }
-    .contact {
-      margin-top: 20px;
-    }
-    .contact a {
-      color: #00bfff;
+
+    a {
+      color: #4fd1c5;
+      font-weight: 600;
       text-decoration: none;
-      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      opacity: 0.7;
+    }
+
+    @keyframes dropIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="Southern Heating Solutions Logo">
-  <h1>We'll Be Back Soon</h1>
-  <p>Our website is currently under maintenance.</p>
-  <div class="contact">
-    <p>📧 <a href="mailto:info@southernheatingsolutions.co.uk">info@southernheatingsolutions.co.uk</a></p>
-    <p>📞 <a href="tel:07350713947">07350 713 947</a></p>
+  <div class="container">
+    <img src="logo.png" alt="Southern Heating Solutions Logo" class="logo" />
+    
+    <h1>🚧 Website Under Maintenance</h1>
+    <p>We’re upgrading our website to serve you better.<br>Please check back soon.</p>
+
+    <a href="mailto:info@southernheatingsolutions.co.uk">📧 info@southernheatingsolutions.co.uk</a>
+    <a href="tel:07350713947">📞 07350 713947</a>
+    <a href="https://wa.me/447350713947" target="_blank">💬 Message us on WhatsApp</a>
+
+    <footer>
+      &copy; 2025 Southern Heating Solutions<br>
+      <em>PRECISION. HEAT. TRUSTED. FLOW.</em>
+    </footer>
   </div>
 </body>
 </html>
