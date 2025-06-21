@@ -4,37 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Website Under Maintenance | Southern Heating Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
+      padding: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #0b2545;
+      background-color: #071d3d;
       color: #ffffff;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      padding: 20px;
       text-align: center;
+      min-height: 100vh;
     }
 
-    img.logo {
-      width: 180px;
-      height: auto;
-      margin-bottom: 25px;
-      animation: dropIn 1s ease-out;
+    .container {
+      padding: 20px;
+      max-width: 480px;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 25px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      animation: dropIn 1.1s ease-out;
     }
 
     h1 {
-      font-size: 2em;
+      font-size: 1.9em;
       margin-bottom: 0.3em;
-    }
-
-    .flicker {
-      display: inline-block;
-      animation: flickerFlame 1.5s infinite alternate;
     }
 
     p {
@@ -47,47 +50,58 @@
       display: inline-block;
       color: #4fd1c5;
       text-decoration: none;
-      font-weight: 700;
-      margin-bottom: 1em;
+      font-weight: 600;
+      margin-bottom: 10px;
     }
 
     a:hover {
       text-decoration: underline;
     }
 
-    footer {
-      margin-top: 2em;
-      font-size: 0.9em;
-      opacity: 0.7;
+    .contact {
+      margin-top: 20px;
     }
 
-    @keyframes flickerFlame {
-      0%   { opacity: 1; transform: scale(1); }
-      50%  { opacity: 0.85; transform: scale(1.03); }
-      100% { opacity: 1; transform: scale(0.98); }
+    footer {
+      margin-top: 30px;
+      font-size: 0.85em;
+      color: #cccccc;
+    }
+
+    .slogan {
+      font-style: italic;
+      color: #aaaaaa;
+      margin-top: 5px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes dropIn {
-      0%   { opacity: 0; transform: translateY(-40px); }
-      100% { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(-25px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <img src="logo.png" alt="Southern Heating Solutions Logo" class="logo" />
 
-  <img src="logo.png" alt="Southern Heating Solutions Logo" class="logo" />
+    <h1>🚧 Website Under Maintenance</h1>
+    <p>We’re upgrading our website to serve you better.<br>Please check back soon.</p>
 
-  <h1><span class="flicker">🔥</span> Website Under Maintenance</h1>
-  <p>We’re upgrading our website to serve you better.<br>Please check back soon.</p>
+    <div class="contact">
+      <a href="mailto:info@southernheatingsolutions.co.uk">📧 info@southernheatingsolutions.co.uk</a><br>
+      <a href="tel:07350713947">📞 07350 713947</a><br>
+      <a href="https://wa.me/447350713947" target="_blank">💬 Message us on WhatsApp</a>
+    </div>
 
-  <a href="mailto:info@southernheatingsolutions.co.uk">📧 info@southernheatingsolutions.co.uk</a><br>
-  <a href="tel:07350713947">📞 07350 713947</a><br>
-  <a href="https://wa.me/447350713947" target="_blank">💬 Message us on WhatsApp</a>
-
-  <footer>
-    © 2025 Southern Heating Solutions<br>
-    <em>PRECISION. HEAT. TRUSTED. FLOW.</em>
-  </footer>
-
+    <footer>
+      &copy; 2025 Southern Heating Solutions
+      <div class="slogan">PRECISION. HEAT. TRUSTED. FLOW.</div>
+    </footer>
+  </div>
 </body>
 </html>
