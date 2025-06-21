@@ -1,9 +1,0 @@
-.flicker {
-  animation: flickerFlame 1.5s infinite alternate ease-in-out;
-}
-
-@keyframes flickerFlame {
-  0%   { opacity: 1; transform: scale(1); }
-  50%  { opacity: 0.85; transform: scale(1.03); }
-  100% { opacity: 1; transform: scale(0.98); }
-}
