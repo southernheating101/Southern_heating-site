@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Website Under Maintenance | Southern Heating Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0b2545;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+
+    img.logo {
+      width: 180px;
+      height: auto;
+      margin-bottom: 25px;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 0.3em;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin: 0.3em 0 1.2em;
+      line-height: 1.6;
+    }
+
+    a {
+      display: inline-block;
+      color: #4fd1c5;
+      text-decoration: none;
+      font-weight: 700;
+      margin-bottom: 1em;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 2em;
+      font-size: 0.9em;
+      opacity: 0.7;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <img src="logo.png" alt="Southern Heating Solutions Logo" class="logo" />
+
+  <h1>🚧 Website Under Maintenance</h1>
+  <p>We’re upgrading our website to serve you better.</p>
+  <p>You can still contact us:</p>
+
+  <a href="mailto:info@southernheatingsolutions.co.uk">📧 info@southernheatingsolutions.co.uk</a><br>
+  <a href="tel:07350713947">📞 07350 713947</a><br>
+  <a href="https://wa.me/447350713947" target="_blank">💬 Message us on WhatsApp</a>
+
+  <footer>© 2025 Southern Heating Solutions</footer>
+</body>
+</html>
