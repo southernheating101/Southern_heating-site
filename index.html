@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,16 +8,17 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="icon" href="https://fav.farm/🔥" />
   <style>
+    html { scroll-behavior: smooth; }
     .hero-bg { background: linear-gradient(120deg, #f0fdfa 0%, #d9f99d 100%); }
   </style>
 </head>
 <body class="text-gray-900 bg-gray-50 font-sans antialiased">
 
-  <!-- HEADER (unchanged) -->
+  <!-- HEADER -->
   <header class="sticky top-0 z-50 bg-white/80 shadow-lg backdrop-blur">
     <div class="container mx-auto flex items-center justify-between py-3 px-4 md:px-8">
       <div class="flex items-center gap-3">
-        <span class="text-3xl">🔥</span>
+        <img src="YOUR_LOGO_URL_HERE" alt="Logo" class="h-10 w-auto rounded-lg">
         <span class="font-bold text-xl md:text-2xl tracking-tight text-blue-700">Southern Heating Solutions</span>
       </div>
       <nav class="hidden md:flex items-center gap-8 font-medium text-lg">
@@ -32,6 +33,7 @@
         </svg>
       </button>
     </div>
+    <!-- Mobile Nav -->
     <div id="mobileNav" class="fixed inset-0 bg-white bg-opacity-95 z-50 flex-col items-center justify-center hidden md:hidden">
       <button id="closeMenu" class="absolute top-5 right-6 text-3xl text-blue-700">&times;</button>
       <nav class="flex flex-col gap-8 text-2xl font-semibold items-center mt-20">
@@ -43,87 +45,37 @@
     </div>
   </header>
 
-  <!-- HERO (unchanged) -->
-  <section class="hero-bg pt-16 pb-10 md:pt-24 md:pb-20">
-    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-8 gap-10">
-      <div class="max-w-xl space-y-6">
-        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-blue-800 mb-2">PRECISION. HEAT. TRUSTED. FLOW.</h1>
-        <p class="text-xl md:text-2xl text-gray-700 mb-4">Elite 24/7 Plumbing & Heating Solutions for Surrey & Kingston.<br>
-          <span class="font-semibold text-blue-700">No callout fees, just trusted service. Gas Safe Registered.</span>
-        </p>
-        <div class="flex flex-wrap items-center gap-4">
-          <a href="#book" class="bg-blue-700 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-800 transition font-bold">Get Instant Quote</a>
-          <a href="mailto:info@southernheatingsolutions.co.uk" class="underline text-blue-700 font-medium">info@southernheatingsolutions.co.uk</a>
-          <span class="font-semibold text-lg">📞 07350 713947</span>
+  <!-- ... rest of your page remains unchanged ... -->
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-14 bg-blue-50">
+    <div class="container mx-auto px-4 md:px-8 max-w-3xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-6">Contact Us</h2>
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="space-y-2 text-lg">
+          <p><span class="font-semibold">Phone:</span> <a href="tel:07350713947" class="text-blue-700 underline">07350 713947</a></p>
+          <p><span class="font-semibold">Email:</span> <a href="mailto:info@southernheatingsolutions.co.uk" class="text-blue-700 underline">info@southernheatingsolutions.co.uk</a></p>
+          <p><span class="font-semibold">Service Area:</span> Surrey & Kingston upon Thames</p>
+          <div class="flex gap-2 items-center mt-2">
+            <span class="bg-yellow-200 px-2 py-1 rounded text-xs font-semibold">Gas Safe Registered</span>
+          </div>
         </div>
-        <div class="flex items-center gap-3 mt-6 flex-wrap">
-          <span class="flex items-center px-3 py-1 bg-yellow-200 rounded-full text-gray-800 font-semibold text-sm">
-            <svg class="w-6 h-6 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10.185 2.179a.5.5 0 0 1 .63 0l7.143 5.54a.5.5 0 0 1-.312.894H2.354a.5.5 0 0 1-.312-.894l7.143-5.54zM2 9v7.5A1.5 1.5 0 0 0 3.5 18h13a1.5 1.5 0 0 0 1.5-1.5V9H2zm7 2h2v5"/></svg>
-            Gas Safe Registered
-          </span>
-          <span class="flex items-center px-3 py-1 bg-green-100 rounded-full text-gray-800 font-semibold text-sm">✔️ Fully Insured</span>
-          <span class="flex items-center px-3 py-1 bg-blue-100 rounded-full text-blue-800 font-semibold text-sm">🛡️ DBS Checked</span>
-          <span class="flex items-center px-3 py-1 bg-yellow-100 rounded-full text-yellow-800 font-semibold text-sm">⭐ 5★ Google Reviews</span>
-        </div>
-      </div>
-      <div class="w-full max-w-sm md:max-w-md flex justify-center">
-        <div class="rounded-2xl shadow-lg border-4 border-blue-200 bg-white flex items-center justify-center h-60 w-60 text-6xl">
-          🛠️
+        <div class="w-full h-52 rounded-2xl overflow-hidden shadow-lg">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.0192963610045!2d-0.2846002!3d51.4082744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876075cc97a1fdf%3A0xc7a708d92d228d58!2sKingston%20upon%20Thames!5e0!3m2!1sen!2suk!4v1719050930123" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- SERVICES (unchanged) -->
-  <!-- ... keep your Services section as before ... -->
-
-  <!-- ABOUT (unchanged) -->
-  <!-- ... keep your About section as before ... -->
-
-  <!-- BOOKING / QUOTE (Formspree enabled!) -->
-  <section id="book" class="py-16 bg-white">
-    <div class="container mx-auto px-4 md:px-8 max-w-xl text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-6">Book a Trusted Engineer</h2>
-      <p class="text-lg mb-6">
-        Use the form below for fast quotes or urgent callouts.<br>
-        Or contact us directly:<br>
-        <span class="font-bold text-blue-700">📞 07350 713947</span> &nbsp; | &nbsp;
-        <a href="mailto:info@southernheatingsolutions.co.uk" class="underline text-blue-700 font-semibold">info@southernheatingsolutions.co.uk</a>
-      </p>
-      <form action="https://formspree.io/f/YOURCODE" method="POST" class="bg-blue-50 p-8 rounded-2xl shadow-lg flex flex-col gap-5 items-center">
-        <input type="text" name="name" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg border focus:outline-blue-700 text-lg" required>
-        <input type="email" name="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg border focus:outline-blue-700 text-lg" required>
-        <input type="tel" name="phone" placeholder="Your Phone Number" value="07350 713947" class="w-full px-4 py-3 rounded-lg border focus:outline-blue-700 text-lg" required>
-        <select name="service" class="w-full px-4 py-3 rounded-lg border focus:outline-blue-700 text-lg" required>
-          <option value="">Select Service</option>
-          <option>Gas Safety Certificate (CP12)</option>
-          <option>Boiler Installation / Swap</option>
-          <option>Central Heating Installation</option>
-          <option>Sink Installation</option>
-          <option>Tap Replacement</option>
-          <option>Radiator Install/Replacement</option>
-          <option>Other / Not Listed</option>
-        </select>
-        <textarea name="details" rows="3" placeholder="Describe the issue, preferred date/time, or any details..." class="w-full px-4 py-3 rounded-lg border focus:outline-blue-700 text-lg" required></textarea>
-        <button type="submit" class="bg-blue-700 text-white px-8 py-3 rounded-xl text-lg font-bold hover:bg-blue-800 transition">Book Now</button>
-      </form>
-      <div class="mt-6 text-blue-700 font-semibold">
-        For emergencies, call <a href="tel:07350713947" class="underline">07350 713947</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT (unchanged) -->
-  <!-- ... keep your Contact section as before ... -->
 
   <script>
-    // Mobile nav toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const closeMenu = document.getElementById('closeMenu');
     function toggleNav() {
-      var nav = document.getElementById('mobileNav');
-      nav.classList.toggle('hidden');
+      mobileNav.classList.toggle('hidden');
     }
-    document.getElementById('menuBtn')?.addEventListener('click', toggleNav);
-    document.getElementById('closeMenu')?.addEventListener('click', toggleNav);
+    menuBtn.addEventListener('click', toggleNav);
+    closeMenu.addEventListener('click', toggleNav);
   </script>
 </body>
 </html>
