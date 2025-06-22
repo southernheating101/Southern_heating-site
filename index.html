@@ -1,20 +1,30 @@
- <!DOCTYPE html><html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Southern Heating Solutions | Precision. Heat. Trusted. Flow.</title>
-  <meta name="description" content="Elite 24/7 Plumbing & Heating | Gas Safe Registered | Surrey & Kingston | Fast Quotes" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="icon" href="https://fav.farm/🔥" />
-  <style>
+  <meta name="description" content="Elite 24/7 Plumbing & Heating | Gas Safe Registered | Surrey & Kingston | Fast Quotes & Trusted Service" />  <!-- Favicons -->  <link rel="icon" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />  <!-- Open Graph & Twitter -->  <meta property="og:title" content="Southern Heating Solutions | Precision. Heat. Trusted. Flow." />
+  <meta property="og:description" content="Elite 24/7 Plumbing & Heating | Gas Safe Registered | Surrey & Kingston" />
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/og-image.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Southern Heating Solutions | Precision. Heat. Trusted. Flow." />
+  <meta name="twitter:description" content="Elite 24/7 Plumbing & Heating | Gas Safe Registered | Surrey & Kingston" />
+  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/og-image.png" />  <!-- Preload key assets -->  <link rel="preload" href="/logo@1x.png" as="image" />
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style" />  <!-- Tailwind CSS -->  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />  <style>
     html { scroll-behavior: smooth; }
     .hero-bg { background: linear-gradient(120deg, #f0fdfa 0%, #d9f99d 100%); }
-  </style>
-</head>
+  </style></head>
 <body class="bg-gray-50 text-gray-900 font-sans antialiased">  <!-- HEADER -->  <header class="sticky top-0 bg-white/80 backdrop-blur shadow-md z-50">
     <div class="container mx-auto flex items-center justify-between p-4 md:px-8">
       <div class="flex items-center gap-3">
-        <img src="/logo.png" alt="Southern Heating Solutions Logo" class="h-12 w-auto rounded-full" />
+        <!-- Responsive logo with srcset -->
+        <img 
+          src="/logo@1x.png" 
+          srcset="/logo@2x.png 2x, /logo.webp 1x" 
+          alt="Southern Heating Solutions logo" 
+          class="h-12 w-auto rounded-full" />
         <span class="font-bold text-xl md:text-2xl text-blue-700">Southern Heating Solutions</span>
       </div>
       <nav class="hidden md:flex items-center gap-8 font-medium text-lg">
@@ -56,70 +66,36 @@
         <div class="rounded-2xl shadow-xl border-4 border-blue-200 bg-white h-60 flex items-center justify-center text-6xl">🛠️</div>
       </div>
     </div>
-  </section>  <!-- BOOKING FORM WITH DYNAMIC QUOTE -->  <section id="book" class="py-16 bg-white">
-    <div class="container mx-auto px-4 md:px-8 max-w-xl">
-      <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-6">Book a Trusted Engineer</h2>
-      <p class="text-lg text-center mb-8">Select a service below to see the instant quote, then submit your booking.</p>
-      <form id="bookingForm" action="https://formspree.io/f/xjkrabkd" method="POST" class="bg-blue-50 p-8 rounded-2xl shadow-lg space-y-5">
-        <input type="text" name="_gotcha" style="display:none" />
-        <input type="hidden" name="_subject" value="New booking request from website" />
-        <div>
-          <label for="service" class="block font-semibold mb-1">Service</label>
-          <select id="service" name="service" required class="w-full px-4 py-3 rounded-lg border focus:outline-blue-700 text-lg">
-            <option value="">Select a service</option>
-            <option>Gas Safety Certificate (CP12)</option>
-            <option>Boiler Installation / Swap</option>
-            <option>Full Central Heating Installation</option>
-            <option>Sink Installation</option>
-            <option>Tap Replacement</option>
-            <option>Radiator Install/Replacement</option>
-            <option>Other / Not Listed</option>
-          </select>
+  </section>  <!-- SERVICES -->  <section id="services" class="py-16 bg-white">
+    <div class="container mx-auto px-4 md:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-10">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Gas Safety -->
+        <div class="bg-blue-50 rounded-2xl shadow p-6 hover:scale-105 transition">
+          <div class="text-4xl mb-3">📝</div>
+          <h3 class="text-xl font-bold mb-2">Gas Safety Certificate (CP12)</h3>
+          <p class="mb-4 text-gray-700">Landlord or homeowner? Fast, certified CP12s with digital delivery.</p>
+          <a href="https://buy.stripe.com/eVqfZi2h1etL2wu5T12B201" target="_blank" class="block bg-blue-700 text-white py-2 rounded-lg text-center hover:bg-blue-800 font-semibold">Book £120</a>
         </div>
-        <div id="quoteDisplay" class="text-xl font-bold text-blue-700 text-center"></div>
-        <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3 rounded-lg border focus:outline-blue-700 text-lg" />
-        <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 rounded-lg border focus:outline-blue-700 text-lg" />
-        <input type="tel" name="phone" placeholder="Your Phone Number" required value="07350 713947" class="w-full px-4 py-3 rounded-lg border focus:outline-blue-700 text-lg" />
-        <textarea name="details" rows="4" placeholder="Describe issue & preferred date/time" required class="w-full px-4 py-3 rounded-lg border focus:outline-blue-700 text-lg"></textarea>
-        <button type="submit" class="w-full bg-blue-700 text-white py-3 rounded-xl font-semibold hover:bg-blue-800 transition text-lg">Submit Booking</button>
-        <div id="bookingSuccess" class="hidden mt-3 text-green-700 font-bold text-center">Thank you! We’ll be in touch shortly.</div>
-      </form>
-    </div>
-  </section>  <!-- SCRIPT: NAV & FORM & QUOTE -->  <script>
-    // Mobile nav toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileNav = document.getElementById('mobileNav');
-    const closeMenu = document.getElementById('closeMenu');
-    function toggleNav() { mobileNav.classList.toggle('hidden'); }
-    menuBtn.addEventListener('click', toggleNav);
-    closeMenu.addEventListener('click', toggleNav);
-
-    // Pricing map
-    const pricing = {
-      'Gas Safety Certificate (CP12)': '£120',
-      'Boiler Installation / Swap': '£1,800',
-      'Full Central Heating Installation': '£3,500',
-      'Sink Installation': '£140',
-      'Tap Replacement': '£85',
-      'Radiator Install/Replacement': '£140'
-    };
-    const serviceSelect = document.getElementById('service');
-    const quoteDisplay = document.getElementById('quoteDisplay');
-    serviceSelect.addEventListener('change', function(){
-      const price = pricing[this.value] || '';
-      quoteDisplay.textContent = price ? `Instant Quote: ${price}` : '';
-    });
-
-    // Formspree AJAX submit
-    const bookingForm = document.getElementById('bookingForm');
-    const bookingSuccess = document.getElementById('bookingSuccess');
-    bookingForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      fetch(this.action, { method: this.method, body: new FormData(this), headers: {'Accept':'application/json'} })
-        .then(response => {
-          if(response.ok){ this.reset(); quoteDisplay.textContent = ''; bookingSuccess.classList.remove('hidden'); }
-          else { alert('Submission failed. Please try again.'); }
-        }).catch(()=> alert('Submission failed. Please check your connection.'));
-    });
-  </script></body>
-</html>
+        <!-- Boiler -->
+        <div class="bg-blue-50 rounded-2xl shadow p-6 hover:scale-105 transition">
+          <div class="text-4xl mb-3">🔥</div>
+          <h3 class="text-xl font-bold mb-2">Boiler Install / Swap</h3>
+          <p class="mb-4 text-gray-700">A-rated boilers fitted with full warranty. Fast, clean installs.</p>
+          <a href="https://buy.stripe.com/7sYdRa8Fpadvc740yH2B200" target="_blank" class="block bg-blue-700 text-white py-2 rounded-lg text-center hover:bg-blue-800 font-semibold">Book £1,800</a>
+        </div>
+        <!-- Full Heating -->
+        <div class="bg-blue-50 rounded-2xl shadow p-6 hover:scale-105 transition">
+          <div class="text-4xl mb-3">🏡</div>
+          <h3 class="text-xl font-bold mb-2">Full Central Heating</h3>
+          <p class="mb-4 text-gray-700">Whole-house upgrades: radiators, pipework, smart controls.</p>
+          <a href="https://buy.stripe.com/eVqfZi2h1etL2wu5T12B201" target="_blank" class="block bg-blue-700 text-white py-2 rounded-lg text-centerhover:bg-blue-800 font-semibold">Book £3,500</a>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+        <!-- Sink -->
+        <div class="bg-blue-50 rounded-2xl shadow p-6 hover:scale-105 transition">
+          <div class="text-4xl mb-3">🚰</div>
+          <h3 class="text-xl font-bold mb-2">Sink Installation</h3>
+          <p class="mb-4 text-gray-700">Expertly fitted sinks & pipework for kitchens & bathrooms.</p>
+          <a href="https://buy.stripe.com/bJebJ22h10CV9YWftB2B203" target="_blank" class="block bg-blue-700 [...] 
