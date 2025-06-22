@@ -4,12 +4,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Southern Heating Solutions | Precision. Heat. Trusted. Flow.</title>
   <meta name="description" content="Elite 24/7 Plumbing & Heating | Gas Safe Registered | Surrey & Kingston | Fast Quotes" />
-  <!-- Favicon -->
   <link rel="icon" href="favicon.png" />
-  <!-- Tailwind CSS via CDN (includes backdrop-blur) -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans antialiased">  <!-- HEADER -->  <header class="sticky top-0 bg-white bg-opacity-90 backdrop-blur shadow-md z-50">
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+  <!-- HEADER -->
+  <header class="sticky top-0 bg-white bg-opacity-90 backdrop-blur shadow-md z-50">
     <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
       <div class="flex items-center gap-3">
         <img src="logo.png" alt="Southern Heating Solutions logo" class="h-10 w-auto rounded-full" />
@@ -27,7 +31,7 @@
         </svg>
       </button>
     </div>
-    <div id="mobileNav" class="hidden fixed inset-0 bg-white p-8">
+    <div id="mobileNav" class="hidden fixed inset-0 bg-white p-8 overflow-auto">
       <button id="closeMenu" class="mb-6 text-gray-800">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -44,7 +48,9 @@
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-4">
       <div class="md:w-1/2 space-y-6">
         <h1 class="text-4xl font-bold text-blue-800">PRECISION. HEAT. TRUSTED. FLOW.</h1>
-        <p class="text-xl text-gray-700">Elite 24/7 Plumbing & Heating Solutions for Surrey & Kingston.<br><span class="font-semibold text-blue-700">No call-out fees • Gas Safe Registered • Fully Insured</span></p>
+        <p class="text-xl text-gray-700">Elite 24/7 Plumbing & Heating Solutions for Surrey & Kingston.<br>
+          <span class="font-semibold text-blue-700">No call-out fees • Gas Safe Registered • Fully Insured</span>
+        </p>
         <div class="flex items-center gap-4">
           <a href="#book" class="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800">Get Instant Quote</a>
           <a href="mailto:info@southernheatingsolutions.co.uk" class="text-blue-700 underline">info@southernheatingsolutions.co.uk</a>
@@ -59,7 +65,6 @@
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-3xl font-bold text-center text-blue-800 mb-10">Our Services</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Cards simplified -->
         <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
           <h3 class="text-xl font-semibold mb-2">Gas Safety Certificate (CP12)</h3>
           <p class="text-gray-700 mb-4">Fast, certified CP12s with digital delivery.</p>
@@ -81,36 +86,51 @@
     <div class="max-w-xl mx-auto px-4">
       <h2 class="text-2xl font-bold text-center text-blue-800 mb-6">Book a Trusted Engineer</h2>
       <form action="https://formspree.io/f/xjkrabkd" method="POST" class="space-y-4">
-        <div><label class="block">Service<select name="service" required class="w-full border rounded-lg p-2"><option value="">Select</option><option>CP12</option><option>Boiler</option><option>Heating</option></select></label></div>
-        <div><input type="text" name="name" placeholder="Your Name" required class="w-full border rounded-lg p-2"/></div>
-        <div><input type="email" name="email" placeholder="Your Email" required class="w-full border rounded-lg p-2"/></div>
-        <div><input type="tel" name="phone" placeholder="Phone" required class="w-full border rounded-lg p-2"/></div>
-        <button type="submit" class="w-full bg-blue-700 text-white py-2 rounded-lg">Submit</button>
+        <label class="block">
+          <span class="font-semibold">Service</span>
+          <select name="service" required class="w-full border rounded-lg p-2">
+            <option value="">Select service</option>
+            <option>Gas Safety Certificate (CP12)</option>
+            <option>Boiler Install / Swap</option>
+            <option>Full Central Heating</option>
+          </select>
+        </label>
+        <label class="block">
+          <span class="font-semibold">Name</span>
+          <input type="text" name="name" required class="w-full border rounded-lg p-2" placeholder="Your Name" />
+        </label>
+        <label class="block">
+          <span class="font-semibold">Email</span>
+          <input type="email" name="email" required class="w-full border rounded-lg p-2" placeholder="Your Email" />
+        </label>
+        <label class="block">
+          <span class="font-semibold">Phone</span>
+          <input type="tel" name="phone" required class="w-full border rounded-lg p-2" placeholder="07350 713947" />
+        </label>
+        <button type="submit" class="w-full bg-blue-700 text-white py-2 rounded-lg hover:bg-blue-800">Submit Booking</button>
       </form>
     </div>
   </section>  <!-- CONTACT -->  <section id="contact" class="py-16 bg-blue-50">
     <div class="max-w-3xl mx-auto px-4">
       <h2 class="text-2xl font-bold text-center text-blue-800 mb-6">Contact Us</h2>
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="space-y-2">
+        <div class="space-y-2 text-lg">
           <p>📞 <a href="tel:07350713947" class="text-gray-800">07350 713947</a></p>
           <p>✉️ <a href="mailto:info@southernheatingsolutions.co.uk" class="text-gray-800">info@southernheatingsolutions.co.uk</a></p>
           <p>📍 Surrey & Kingston upon Thames</p>
         </div>
         <div class="h-60">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31773.73240631358!2d-0.3089958520491092!3d51.40755289382116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760a8528da9995%3A0x5824e50c4ce6451b!2sRoyal%20Borough%20of%20Kingston%20upon%20Thames!5e0!3m2!1sen!2suk!4v1719055089062!5m2!1sen!2suk"
-            width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31773.73240631358!2d-0.3089958520491092!3d51.40755289382116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760a8528da9995%3A0x5824e50c4ce6451b!2sRoyal%20Borough%20of%20Kingston%20upon%20Thames!5e0!3m2!1sen!2suk!4v1719055089062!5m2!1sen!2suk" width="100%" height="100%" style="border:0" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
     </div>
   </section>  <!-- FOOTER -->  <footer class="py-6 bg-white">
-    <div class="max-w-6xl mx-auto text-center text-gray-600">© 2025 Southern Heating Solutions.</div>
+    <div class="max-w-6xl mx-auto text-center text-gray-600">© 2025 Southern Heating Solutions</div>
   </footer>  <script>
-    // Mobile nav
     const menuBtn = document.getElementById('menuBtn');
     const mobileNav = document.getElementById('mobileNav');
     const closeMenu = document.getElementById('closeMenu');
-    menuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
-    closeMenu.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+    menuBtn.addEventListener('click', ()=> mobileNav.classList.toggle('hidden'));
+    closeMenu.addEventListener('click', ()=> mobileNav.classList.toggle('hidden'));
   </script></body>
 </html>
