@@ -2,96 +2,158 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Southern Heating Solutions | Plumbing & Gas Experts in Surrey & Kingston</title>
-  <meta name="description" content="Book trusted, certified plumbing and heating services with Southern Heating Solutions. Serving Surrey & Kingston with 24/7 availability. Safe. Local. Fast." />
-  <link rel="icon" href="/favicon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Southern Heating Solutions</title>
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
   <style>
-    :root {
-      --primary: #005eb8;
-      --secondary: #002f6c;
-      --accent: #009edb;
-      --light: #f7f9fc;
-    }
     * {
-      margin: 0; padding: 0; box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--light);
-      color: #111;
+      font-family: 'Roboto', sans-serif;
+      background: #f9f9f9;
+      color: #222;
       line-height: 1.6;
     }
     header {
-      background: var(--secondary);
-      padding: 1.5rem 2rem;
+      background: #002f6c;
+      color: white;
+      padding: 1rem;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
     }
-    header img { height: 55px; }
+    header img {
+      height: 50px;
+    }
     nav a {
       color: white;
-      margin-left: 2rem;
+      margin-left: 20px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: bold;
     }
     .hero {
-      background: url('/hero-bg.jpg') center/cover no-repeat;
+      background: linear-gradient(to right, #004d99, #0073e6);
       color: white;
       text-align: center;
-      padding: 6rem 2rem;
+      padding: 4rem 2rem;
     }
     .hero h1 {
-      font-size: 2.75rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
     }
     .hero p {
-      font-size: 1.25rem;
-    }
-    .steps {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      background: white;
-      padding: 3rem 1rem;
-    }
-    .step {
-      max-width: 250px;
-      text-align: center;
-    }
-    .step h3 {
-      color: var(--primary);
-      margin-top: 0.5rem;
+      font-size: 1.2rem;
     }
     .services {
-      padding: 3rem 2rem;
-      background: #ffffff;
-      text-align: center;
-    }
-    .services h2 { margin-bottom: 2rem; color: var(--secondary); }
-    .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
+      padding: 2rem;
     }
     .card {
-      background: var(--light);
-      padding: 1.5rem;
+      background: white;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      text-align: center;
     }
-    .card h4 { color: var(--primary); margin: 1rem 0 0.5rem; }
+    .card h3 {
+      margin-bottom: 1rem;
+    }
     .card a {
+      background: #004d99;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
       display: inline-block;
       margin-top: 0.5rem;
-      background: var(--primary);
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-      text-decoration: none;
     }
-    .trust-section {
+    .map {
       padding: 2rem;
-      background: #f0f4f
+      text-align: center;
+    }
+    footer {
+      background: #002f6c;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/logo.png" alt="Southern Heating Solutions Logo">
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>  <section class="hero">
+    <h1>PRECISION. HEAT. TRUSTED. FLOW.</h1>
+    <p>24/7 Plumbing & Heating Experts in Surrey & Kingston</p>
+  </section>  <section class="services" id="services">
+    <div class="card">
+      <h3>Gas Safety Certificate</h3>
+      <a href="https://buy.stripe.com/00wdRaaNxfxPgnk3KT2B205">Book £120</a>
+    </div>
+    <div class="card">
+      <h3>Boiler Service</h3>
+      <a href="https://buy.stripe.com/5kQ9AU5tdclD2wu2GP2B206">Book £90</a>
+    </div>
+    <div class="card">
+      <h3>Boiler Repair Diagnosis</h3>
+      <a href="https://buy.stripe.com/dRm9AU6xhbhz8US4OX2B208">Book £75</a>
+    </div>
+    <div class="card">
+      <h3>Sink Installation</h3>
+      <a href="https://buy.stripe.com/bJebJ22h10CV9YWftB2B203">Book £140</a>
+    </div>
+    <div class="card">
+      <h3>Tap Replacement</h3>
+      <a href="https://buy.stripe.com/fZu9AUaNx4TbfjgftB2B207">Book £85</a>
+    </div>
+    <div class="card">
+      <h3>Thermostat Installation</h3>
+      <a href="https://buy.stripe.com/7sY4gA7BlfxP4ECbdl2B204">Book £120</a>
+    </div>
+    <div class="card">
+      <h3>Radiator Install / Replacement</h3>
+      <a href="https://buy.stripe.com/3cIaEY7Bl0CVc741CL2B202">Book</a>
+    </div>
+    <div class="card">
+      <h3>New Boiler Installation</h3>
+      <a href="https://buy.stripe.com/7sYdRa8Fpadvc740yH2B200">Book £1800</a>
+    </div>
+    <div class="card">
+      <h3>Full Central Heating</h3>
+      <a href="https://buy.stripe.com/eVqfZi2h1etL2wu5T12B201">Book £3500</a>
+    </div>
+  </section>  <section class="map" id="contact">
+    <h2>Find Us</h2>
+    <iframe
+      src="https://www.google.com/maps/embed/v1/place?q=Kingston+upon+Thames,+UK&key=YOUR_GOOGLE_MAPS_API_KEY"
+      width="100%"
+      height="300"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>  <footer>
+    &copy; 2025 Southern Heating Solutions. All rights reserved.
+  </footer>
+</body>
+</html>
