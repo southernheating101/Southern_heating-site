@@ -6,88 +6,131 @@
   <title>Southern Heating Solutions</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-900">
 
-  <header class="bg-white shadow p-4">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-xl font-bold text-blue-700">Southern Heating Solutions</h1>
       <nav class="space-x-4 text-sm">
-        <a href="#services" class="text-gray-700 hover:text-blue-600">Services</a>
-        <a href="#booking" class="text-gray-700 hover:text-blue-600">Book</a>
-        <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+        <a href="#services" class="text-blue-600 hover:underline">Services</a>
+        <a href="#book" class="text-blue-600 hover:underline">Book</a>
+        <a href="#contact" class="text-blue-600 hover:underline">Contact</a>
       </nav>
     </div>
   </header>
 
-  <section class="bg-blue-100 text-center py-10">
-    <h2 class="text-3xl font-extrabold text-blue-900">PRECISION. HEAT. TRUSTED. FLOW.</h2>
-    <p class="text-gray-700 mt-2">Elite 24/7 Plumbing & Heating Solutions for Surrey & Kingston</p>
-    <p class="text-gray-600 text-sm">No call-out fees • Gas Safe Registered • Fully Insured</p>
-    <a href="#booking" class="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">Book Now</a>
-    <p class="mt-2 text-sm text-blue-800">info@southernheatingsolutions.co.uk</p>
+  <!-- Hero Section -->
+  <section class="bg-blue-100 text-center py-10 px-4">
+    <h2 class="text-3xl font-bold text-blue-900 mb-2">PRECISION. HEAT. TRUSTED. FLOW.</h2>
+    <p class="text-lg mb-4">Elite 24/7 Plumbing & Heating Solutions for Surrey & Kingston</p>
+    <p class="text-sm text-gray-700 mb-4">No call-out fees • Gas Safe Registered • Fully Insured</p>
+    <a href="#book" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Book Now</a>
+    <p class="mt-2 text-blue-800 text-sm">info@southernheatingsolutions.co.uk</p>
   </section>
 
-  <section id="services" class="py-16">
+  <!-- Services Section -->
+  <section id="services" class="py-12">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-10">Our Services</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Each service card -->
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
-          <h3 class="font-semibold text-blue-700">Gas Safety Certificate (CP12)</h3>
-          <p class="text-sm text-gray-600 mb-3">Certified CP12s with digital delivery.</p>
-          <a href="https://buy.stripe.com/eVqfZi2h1etL2wu5T12B201" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Book £120</a>
+      <h3 class="text-2xl font-bold text-center mb-8 text-blue-900">Our Services</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+        <!-- 1 -->
+        <div class="bg-white rounded-xl shadow p-5">
+          <h4 class="text-blue-700 font-bold">Gas Safety Certificate (CP12)</h4>
+          <p>Certified CP12s with digital delivery.</p>
+          <a href="https://buy.stripe.com/eVqfZi2h1etL2wu5T12B201" class="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded">Book £120</a>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
-          <h3 class="font-semibold text-green-700">Boiler Swap / New Boiler Installation</h3>
-          <p class="text-sm text-gray-600 mb-3">A-rated boilers with full warranty.</p>
-          <a href="https://buy.stripe.com/7sYdRa8Fpadvc740yH2B200" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">Book £1800</a>
+        <!-- 2 -->
+        <div class="bg-white rounded-xl shadow p-5">
+          <h4 class="text-green-700 font-bold">Boiler Swap / New Boiler Installation</h4>
+          <p>A-rated boilers with full warranty.</p>
+          <a href="https://buy.stripe.com/7sYdRa8Fpadvc740yH2B200" class="mt-3 inline-block bg-green-600 text-white px-4 py-2 rounded">Book £1800</a>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
-          <h3 class="font-semibold text-orange-600">Full Central Heating Installation</h3>
-          <p class="text-sm text-gray-600 mb-3">Radiators, pipework, and full upgrades.</p>
-          <a href="https://buy.stripe.com/eVqfZi2h1etL2wu5T12B201" target="_blank" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition">Book £3500</a>
+        <!-- 3 -->
+        <div class="bg-white rounded-xl shadow p-5">
+          <h4 class="text-yellow-700 font-bold">Full Central Heating Installation</h4>
+          <p>Radiators, pipework, and full upgrades.</p>
+          <a href="https://buy.stripe.com/eVqfZi2h1etL2wu5T12B201" class="mt-3 inline-block bg-yellow-500 text-white px-4 py-2 rounded">Book £3500</a>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
-          <h3 class="font-semibold text-blue-700">Sink Installation</h3>
-          <p class="text-sm text-gray-600 mb-3">Professional sink installs and upgrades.</p>
-          <a href="https://buy.stripe.com/bJebJ22h10CV9YWftB2B203" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Book £140</a>
+        <!-- 4 -->
+        <div class="bg-white rounded-xl shadow p-5">
+          <h4 class="text-blue-800 font-bold">Sink Installation</h4>
+          <p>Professional sink installs and upgrades.</p>
+          <a href="https://buy.stripe.com/bJebJ22h10CV9YWftB2B203" class="mt-3 inline-block bg-blue-800 text-white px-4 py-2 rounded">Book £140</a>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
-          <h3 class="font-semibold text-purple-700">Radiator Install or Replacement</h3>
-          <p class="text-sm text-gray-600 mb-3">High-efficiency radiator installations.</p>
-          <a href="https://buy.stripe.com/3cIaEY7Bl0CVc741CL2B202" target="_blank" class="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800 transition">Book £140</a>
+        <!-- 5 -->
+        <div class="bg-white rounded-xl shadow p-5">
+          <h4 class="text-purple-700 font-bold">Radiator Install or Replacement</h4>
+          <p>High-efficiency radiator installations.</p>
+          <a href="https://buy.stripe.com/3cIaEY7Bl0CVc741CL2B202" class="mt-3 inline-block bg-purple-700 text-white px-4 py-2 rounded">Book £140</a>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
-          <h3 class="font-semibold text-rose-600">Tap Replacement (Kitchen or Bathroom)</h3>
-          <p class="text-sm text-gray-600 mb-3">Fast, affordable tap replacements.</p>
-          <a href="https://buy.stripe.com/fZu9AUaNx4TbfjgftB2B207" target="_blank" class="bg-rose-600 text-white px-4 py-2 rounded hover:bg-rose-700 transition">Book £85</a>
+        <!-- 6 -->
+        <div class="bg-white rounded-xl shadow p-5">
+          <h4 class="text-pink-700 font-bold">Tap Replacement (Kitchen or Bathroom)</h4>
+          <p>Fast, affordable tap replacements.</p>
+          <a href="https://buy.stripe.com/fZu9AUaNx4TbfjgftB2B207" class="mt-3 inline-block bg-pink-600 text-white px-4 py-2 rounded">Book £85</a>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
-          <h3 class="font-semibold text-yellow-700">Boiler Repair Diagnosis</h3>
-          <p class="text-sm text-gray-600 mb-3">Accurate fault finding and recommendations.</p>
-          <a href="https://buy.stripe.com/dRm9AU6xhbhz8US4OX2B208" target="_blank" class="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700 transition">Book £75</a>
+        <!-- 7 -->
+        <div class="bg-white rounded-xl shadow p-5">
+          <h4 class="text-orange-700 font-bold">Boiler Repair Diagnosis</h4>
+          <p>Accurate fault finding and recommendations.</p>
+          <a href="https://buy.stripe.com/dRm9AU6xhbhz8US4OX2B208" class="mt-3 inline-block bg-orange-600 text-white px-4 py-2 rounded">Book £75</a>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
-          <h3 class="font-semibold text-emerald-700">Boiler Service</h3>
-          <p class="text-sm text-gray-600 mb-3">Annual boiler maintenance and checks.</p>
-          <a href="https://buy.stripe.com/5kQ9AU5tdclD2wu2GP2B206" target="_blank" class="bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700 transition">Book £90</a>
+        <!-- 8 -->
+        <div class="bg-white rounded-xl shadow p-5">
+          <h4 class="text-green-800 font-bold">Boiler Service</h4>
+          <p>Annual boiler maintenance and checks.</p>
+          <a href="https://buy.stripe.com/5kQ9AU5tdclD2wu2GP2B206" class="mt-3 inline-block bg-green-800 text-white px-4 py-2 rounded">Book £90</a>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
-          <h3 class="font-semibold text-pink-700">Thermostat Installation (inc. Smart)</h3>
-          <p class="text-sm text-gray-600 mb-3">Installation of standard or smart thermostats.</p>
-          <a href="https://buy.stripe.com/7sY4gA7BlfxP4ECbdl2B204" target="_blank" class="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 transition">Book £120</a>
+        <!-- 9 -->
+        <div class="bg-white rounded-xl shadow p-5">
+          <h4 class="text-pink-800 font-bold">Thermostat Installation (inc. Smart)</h4>
+          <p>Installation of standard or smart thermostats.</p>
+          <a href="https://buy.stripe.com/7sY4gA7BlfxP4ECbdl2B204" class="mt-3 inline-block bg-pink-700 text-white px-4 py-2 rounded">Book £120</a>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Booking Form -->
+  <section id="book" class="bg-white py-12 px-4">
+    <div class="max-w-xl mx-auto">
+      <h3 class="text-2xl font-bold text-center mb-6 text-blue-900">Book a Trusted Engineer</h3>
+      <form action="https://formspree.io/f/xjkrabkd" method="POST" class="space-y-4">
+        <input type="text" name="name" placeholder="Full Name" class="w-full border p-2 rounded" required>
+        <input type="email" name="email" placeholder="Email Address" class="w-full border p-2 rounded" required>
+        <input type="tel" name="phone" placeholder="Phone Number" class="w-full border p-2 rounded" required>
+        <select name="service" class="w-full border p-2 rounded" required>
+          <option value="" disabled selected>Select a Service</option>
+          <option>Gas Safety Certificate (CP12)</option>
+          <option>Boiler Swap / New Boiler Installation</option>
+          <option>Full Central Heating Installation</option>
+          <option>Sink Installation</option>
+          <option>Radiator Install or Replacement</option>
+          <option>Tap Replacement (Kitchen or Bathroom)</option>
+          <option>Boiler Repair Diagnosis</option>
+          <option>Boiler Service</option>
+          <option>Thermostat Installation (inc. Smart)</option>
+        </select>
+        <textarea name="message" placeholder="Additional Details" class="w-full border p-2 rounded" rows="4"></textarea>
+        <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Submit Booking</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-100 py-6 text-center text-sm text-gray-600">
+    &copy; 2025 Southern Heating Solutions. All rights reserved.
+  </footer>
 
 </body>
 </html>
