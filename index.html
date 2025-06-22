@@ -1,80 +1,204 @@
-import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button"; import { Phone, Mail, MapPin, Wrench, Flame, Clock } from "lucide-react"; import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Southern Heating Solutions | Precision. Heat. Trusted. Flow.</title>
+  <meta name="description" content="24/7 Plumbing & Heating | Gas Safe Registered | Serving Surrey & Kingston | Fast Quotes & Elite Service.">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" href="https://i.imgur.com/R5cZpI8.png" />
+  <style>
+    .trusted-gradient { background: linear-gradient(90deg, #00B4D8 0%, #009688 100%); }
+    .hero-bg { background: linear-gradient(120deg, #f0fdfa 0%, #d9f99d 100%); }
+    .modal { display: none; }
+    .modal.active { display: flex; }
+  </style>
+</head>
+<body class="text-gray-900 bg-gray-50 font-sans antialiased">
 
-export default function SouthernHeatingSolutions() { return ( <main className="bg-white text-black"> {/* Hero Section */} <section className="bg-gradient-to-r from-blue-900 to-blue-600 text-white py-20 px-6 text-center"> <motion.h1 className="text-5xl font-bold mb-4" initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }}>PRECISION. HEAT. TRUSTED. FLOW.</motion.h1> <p className="text-lg mb-6">Southern Heating Solutions | Surrey & Kingston | 24/7 Callouts</p> <Button className="text-lg px-6 py-3">Request a Quote</Button> </section>
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-white/80 shadow-lg backdrop-blur">
+    <div class="container mx-auto flex items-center justify-between py-3 px-4 md:px-8">
+      <!-- Logo & Brand -->
+      <div class="flex items-center gap-3">
+        <img src="https://i.imgur.com/R5cZpI8.png" alt="Southern Heating Solutions Logo" class="h-10 w-10 rounded-full shadow" />
+        <span class="font-bold text-xl md:text-2xl tracking-tight text-blue-700">Southern Heating Solutions</span>
+      </div>
+      <!-- Nav -->
+      <nav class="hidden md:flex items-center gap-8 font-medium text-lg">
+        <a href="#services" class="hover:text-blue-700 transition">Services</a>
+        <a href="#about" class="hover:text-blue-700 transition">About</a>
+        <a href="#contact" class="hover:text-blue-700 transition">Contact</a>
+        <a href="#book" class="bg-blue-700 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-800 transition font-semibold">Get a Quote</a>
+      </nav>
+      <!-- Mobile Nav Button -->
+      <button id="menuBtn" class="md:hidden flex items-center p-2" aria-label="Open menu">
+        <svg class="w-7 h-7 text-blue-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Nav -->
+    <div id="mobileNav" class="fixed inset-0 bg-white bg-opacity-95 z-50 flex-col items-center justify-center hidden md:hidden">
+      <button id="closeMenu" class="absolute top-5 right-6 text-3xl text-blue-700">&times;</button>
+      <nav class="flex flex-col gap-8 text-2xl font-semibold items-center mt-20">
+        <a href="#services" class="hover:text-blue-700 transition" onclick="toggleNav()">Services</a>
+        <a href="#about" class="hover:text-blue-700 transition" onclick="toggleNav()">About</a>
+        <a href="#contact" class="hover:text-blue-700 transition" onclick="toggleNav()">Contact</a>
+        <a href="#book" class="bg-blue-700 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-800 transition" onclick="toggleNav()">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
 
-{/* Services */}
-  <section className="py-16 px-6 grid md:grid-cols-3 gap-8 text-center">
-    <Card className="shadow-xl">
-      <CardContent className="p-6">
-        <Wrench className="mx-auto mb-4" size={40} />
-        <h2 className="text-xl font-bold mb-2">General Plumbing</h2>
-        <p>Reliable plumbing solutions, repairs, and installations across Surrey & Kingston.</p>
-      </CardContent>
-    </Card>
-    <Card className="shadow-xl">
-      <CardContent className="p-6">
-        <Flame className="mx-auto mb-4" size={40} />
-        <h2 className="text-xl font-bold mb-2">Gas Services</h2>
-        <p>Certified for gas work. Gas Safety Certificates (CP12), boiler services & more.</p>
-      </CardContent>
-    </Card>
-    <Card className="shadow-xl">
-      <CardContent className="p-6">
-        <Clock className="mx-auto mb-4" size={40} />
-        <h2 className="text-xl font-bold mb-2">24/7 Emergency Callouts</h2>
-        <p>Fast, dependable emergency plumbing and heating response – day or night.</p>
-      </CardContent>
-    </Card>
-  </section>
-
-  {/* Pricing Section */}
-  <section className="bg-gray-100 py-16 px-6">
-    <h2 className="text-3xl font-bold text-center mb-12">Popular Services & Pricing</h2>
-    <div className="grid md:grid-cols-3 gap-8">
-      <Card className="shadow-lg">
-        <CardContent className="p-6 text-center">
-          <h3 className="text-2xl font-semibold mb-2">Gas Safety Certificate</h3>
-          <p className="mb-4">CP12 Landlord Certificate</p>
-          <p className="text-xl font-bold mb-4">£120</p>
-          <Button asChild><a href="https://buy.stripe.com/eVqfZi2h1etL2wu5T12B201">Book Now</a></Button>
-        </CardContent>
-      </Card>
-      <Card className="shadow-lg">
-        <CardContent className="p-6 text-center">
-          <h3 className="text-2xl font-semibold mb-2">Boiler Installation</h3>
-          <p className="mb-4">Full swap with expert fitting</p>
-          <p className="text-xl font-bold mb-4">£1,800</p>
-          <Button asChild><a href="https://buy.stripe.com/7sYdRa8Fpadvc740yH2B200">Book Now</a></Button>
-        </CardContent>
-      </Card>
-      <Card className="shadow-lg">
-        <CardContent className="p-6 text-center">
-          <h3 className="text-2xl font-semibold mb-2">Sink Installation</h3>
-          <p className="mb-4">Includes plumbing, sealing, fittings</p>
-          <p className="text-xl font-bold mb-4">£140</p>
-          <Button asChild><a href="https://buy.stripe.com/bJebJ22h10CV9YWftB2B203">Book Now</a></Button>
-        </CardContent>
-      </Card>
+  <!-- HERO -->
+  <section class="hero-bg pt-16 pb-10 md:pt-24 md:pb-20">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-8 gap-10">
+      <!-- Text -->
+      <div class="max-w-xl space-y-6">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-blue-800 mb-2">PRECISION. HEAT. TRUSTED. FLOW.</h1>
+        <p class="text-xl md:text-2xl text-gray-700 mb-4">Elite 24/7 Plumbing & Heating Solutions for Surrey & Kingston. Gas Safe Registered. <span class="font-semibold text-blue-700">No callout fees, just trusted service.</span></p>
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="#book" class="bg-blue-700 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-800 transition font-bold">Get Instant Quote</a>
+          <a href="mailto:info@southernheatingsolutions.co.uk" class="underline text-blue-700 font-medium">info@southernheatingsolutions.co.uk</a>
+          <span class="font-semibold text-lg">📞 07458 190 799</span>
+        </div>
+        <!-- Trust Badges -->
+        <div class="flex items-center gap-4 mt-6">
+          <img src="https://i.imgur.com/O0Qp5tA.png" alt="Gas Safe" class="h-10" title="Gas Safe Registered"/>
+          <img src="https://i.imgur.com/7KpXFCW.png" alt="Fully Insured" class="h-10" title="Fully Insured"/>
+          <span class="text-gray-700 font-semibold">DBS Checked</span>
+          <span class="text-gray-700 font-semibold">5★ Google Reviews</span>
+        </div>
+      </div>
+      <!-- Hero Image -->
+      <div class="w-full max-w-sm md:max-w-md">
+        <img src="https://i.imgur.com/SCmxw4F.jpg" alt="Heating Engineer" class="rounded-2xl shadow-lg border-4 border-blue-200"/>
+      </div>
     </div>
   </section>
 
-  {/* Contact Section */}
-  <section className="py-16 px-6 text-center">
-    <h2 className="text-3xl font-bold mb-6">Contact & Coverage</h2>
-    <p className="mb-4">Serving: Surrey, Kingston upon Thames & nearby areas</p>
-    <div className="flex flex-col md:flex-row justify-center gap-6 text-lg">
-      <p><Phone className="inline mr-2" /> 24/7 Phone: <a href="tel:+447000000000" className="underline">+44 7000 000000</a></p>
-      <p><Mail className="inline mr-2" /> Email: <a href="mailto:info@southernheatingsolutions.co.uk" className="underline">info@southernheatingsolutions.co.uk</a></p>
-      <p><MapPin className="inline mr-2" /> Registered in England & Wales</p>
+  <!-- SERVICES -->
+  <section id="services" class="py-14 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-10">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Service Card -->
+        <div class="bg-blue-50 rounded-2xl shadow p-7 flex flex-col items-start hover:scale-105 transition">
+          <div class="mb-3">
+            <img src="https://i.imgur.com/JbQpQvj.png" class="h-10" alt="Gas Safety"/>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Gas Safety Certificate (CP12)</h3>
+          <p class="text-gray-700 mb-3">Landlord or homeowner? Fast, certified CP12s with digital delivery.</p>
+          <a href="https://buy.stripe.com/eVqfZi2h1etL2wu5T12B201" target="_blank" class="mt-auto bg-blue-700 text-white px-5 py-2 rounded-lg hover:bg-blue-800 transition font-semibold">Book £120</a>
+        </div>
+        <div class="bg-blue-50 rounded-2xl shadow p-7 flex flex-col items-start hover:scale-105 transition">
+          <div class="mb-3">
+            <img src="https://i.imgur.com/YUP2QTu.png" class="h-10" alt="Boiler Install"/>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Boiler Install / Swap</h3>
+          <p class="text-gray-700 mb-3">A-rated boilers fitted with full warranty. Fast, clean installs.</p>
+          <a href="https://buy.stripe.com/7sYdRa8Fpadvc740yH2B200" target="_blank" class="mt-auto bg-blue-700 text-white px-5 py-2 rounded-lg hover:bg-blue-800 transition font-semibold">Book £1,800</a>
+        </div>
+        <div class="bg-blue-50 rounded-2xl shadow p-7 flex flex-col items-start hover:scale-105 transition">
+          <div class="mb-3">
+            <img src="https://i.imgur.com/3hzHTaT.png" class="h-10" alt="Central Heating"/>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Full Central Heating</h3>
+          <p class="text-gray-700 mb-3">Whole-house upgrades: radiators, pipework, smart controls. One price.</p>
+          <a href="https://buy.stripe.com/eVqfZi2h1etL2wu5T12B201" target="_blank" class="mt-auto bg-blue-700 text-white px-5 py-2 rounded-lg hover:bg-blue-800 transition font-semibold">Book £3,500</a>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+        <div class="bg-blue-50 rounded-2xl shadow p-7 flex flex-col items-start hover:scale-105 transition">
+          <div class="mb-3">
+            <img src="https://i.imgur.com/FD8jTZF.png" class="h-10" alt="Sink Install"/>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Sink Installation</h3>
+          <p class="text-gray-700 mb-3">Expertly fitted sinks and pipework. Kitchens and bathrooms.</p>
+          <a href="https://buy.stripe.com/bJebJ22h10CV9YWftB2B203" target="_blank" class="mt-auto bg-blue-700 text-white px-5 py-2 rounded-lg hover:bg-blue-800 transition font-semibold">Book £140</a>
+        </div>
+        <div class="bg-blue-50 rounded-2xl shadow p-7 flex flex-col items-start hover:scale-105 transition">
+          <div class="mb-3">
+            <img src="https://i.imgur.com/Zi0lDsc.png" class="h-10" alt="Tap Replacement"/>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Tap Replacement</h3>
+          <p class="text-gray-700 mb-3">Quick, tidy tap replacements for kitchen & bathroom. All major brands.</p>
+          <a href="#" target="_blank" class="mt-auto bg-blue-700 text-white px-5 py-2 rounded-lg opacity-60 cursor-not-allowed font-semibold">Book £85</a>
+        </div>
+        <div class="bg-blue-50 rounded-2xl shadow p-7 flex flex-col items-start hover:scale-105 transition">
+          <div class="mb-3">
+            <img src="https://i.imgur.com/yFkBQZ3.png" class="h-10" alt="Radiator Install"/>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Radiator Install/Replacement</h3>
+          <p class="text-gray-700 mb-3">Single or multiple radiators replaced or upgraded. Same-day service.</p>
+          <a href="https://buy.stripe.com/3cIaEY7Bl0CVc741CL2B202" target="_blank" class="mt-auto bg-blue-700 text-white px-5 py-2 rounded-lg hover:bg-blue-800 transition font-semibold">Book £140</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  {/* Footer */}
-  <footer className="bg-blue-900 text-white py-6 px-6 text-center">
-    <p>© 2025 Southern Heating Solutions Ltd. All rights reserved.</p>
-    <p>Company Number: [INSERT]</p>
-  </footer>
-</main>
+  <!-- ABOUT -->
+  <section id="about" class="py-16 bg-gradient-to-tr from-blue-50 via-white to-blue-100">
+    <div class="container mx-auto px-4 md:px-8 max-w-4xl">
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="w-full md:w-2/3">
+          <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-5">About Southern Heating Solutions</h2>
+          <p class="text-lg mb-3">
+            Southern Heating Solutions is your trusted, local plumbing and heating expert, serving Surrey & Kingston with integrity and unmatched skill. We are Gas Safe Registered, fully insured, and DBS checked for your peace of mind.
+          </p>
+          <p class="text-lg mb-3">
+            We believe in <span class="font-bold text-blue-700">transparency, quality, and speed</span>. Our engineers treat your home as their own and pride themselves on fast, reliable, no-mess service—24 hours a day, 7 days a week.
+          </p>
+          <ul class="list-disc pl-5 space-y-2 text-blue-800 font-semibold">
+            <li>No call-out fees</li>
+            <li>Upfront fixed pricing</li>
+            <li>Certified & insured</li>
+            <li>5-star Google reviews</li>
+            <li>Fast, friendly local support</li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/3 flex justify-center">
+          <img src="https://i.imgur.com/9bEOtB0.png" alt="Trusted Badge" class="h-40 rounded-2xl shadow-lg"/>
+        </div>
+      </div>
+    </div>
+  </section>
 
-); }
+  <!-- BOOKING / QUOTE -->
+  <section id="book" class="py-16 bg-white">
+    <div class="container mx-auto px-4 md:px-8 max-w-xl text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-6">Get a Fast, Fixed Quote</h2>
+      <p class="text-lg mb-6">Tell us about your job, and we'll reply fast. No obligation, just honest advice.</p>
+      <form id="quoteForm" class="bg-blue-50 p-8 rounded-2xl shadow-lg flex flex-col gap-5 items-center">
+        <input type="text" name="name" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg border focus:outline-blue-700 text-lg" required>
+        <input type="email" name="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg border focus:outline-blue-700 text-lg" required>
+        <input type="tel" name="phone" placeholder="Phone Number" class="w-full px-4 py-3 rounded-lg border focus:outline-blue-700 text-lg" required>
+        <textarea name="details" rows="3" placeholder="Describe the issue or service needed..." class="w-full px-4 py-3 rounded-lg border focus:outline-blue-700 text-lg" required></textarea>
+        <button type="submit" class="bg-blue-700 text-white px-8 py-3 rounded-xl text-lg font-bold hover:bg-blue-800 transition">Request Quote</button>
+        <div id="quoteSuccess" class="hidden mt-3 text-green-700 font-bold">Thank you! We'll be in touch shortly.</div>
+      </form>
+      <div class="mt-6 flex flex-col gap-2 text-blue-700 font-semibold">
+        <span>Or call <a href="tel:07458190799" class="underline">07458 190 799</a> for urgent bookings</span>
+        <span>Or email <a href="mailto:info@southernheatingsolutions.co.uk" class="underline">info@southernheatingsolutions.co.uk</a></span>
+      </div>
+    </div>
+  </section>
 
+  <!-- CONTACT -->
+  <section id="contact" class="py-14 bg-blue-50">
+    <div class="container mx-auto px-4 md:px-8 max-w-3xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-6">Contact Us</h2>
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="space-y-2 text-lg">
+          <p><span class="font-semibold">Phone:</span> <a href="tel:07458190799" class="text-blue-700 underline">07458 190 799</a></p>
+          <p><span class="font-semibold">Email:</span> <a href="mailto:info@southernheatingsolutions.co.uk" class="text-blue-700 underline">info@southernheatingsolutions.co.uk</a></p>
+          <p><span class="font-semibold">Service Area:</span> Surrey & Kingston upon Thames</p>
+          <div class="flex gap-2 items-center mt-2">
+            <img src="https://i.imgur.com/O0Qp5tA.png" class="h-8" alt="Gas Safe" title="Gas Safe Registered"/>
+            <span class="font-semibold text-blue-700">Gas Safe Registered</span>
+          </div>
+        </div>
+        <div class="w-full h-52 rounded-2xl overflow-hidden shadow-lg">
+          <!-- Google Maps Embed -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79687.8698478358!2d-0.3367528506198337!3d51.4007234620736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760b4fa5670e0b%3A0x1c
