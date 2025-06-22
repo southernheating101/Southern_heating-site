@@ -1,159 +1,80 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Southern Heating Solutions</title>
-  <link rel="icon" href="/logo.png" type="image/png">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: #f9f9f9;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      background: #002f6c;
-      color: white;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header img {
-      height: 50px;
-    }
-    nav a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      background: linear-gradient(to right, #004d99, #0073e6);
-      color: white;
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-    }
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      text-align: center;
-    }
-    .card h3 {
-      margin-bottom: 1rem;
-    }
-    .card a {
-      background: #004d99;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 0.5rem;
-    }
-    .map {
-      padding: 2rem;
-      text-align: center;
-    }
-    footer {
-      background: #002f6c;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav {
-        margin-top: 1rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="/logo.png" alt="Southern Heating Solutions Logo">
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>  <section class="hero">
-    <h1>PRECISION. HEAT. TRUSTED. FLOW.</h1>
-    <p>24/7 Plumbing & Heating Experts in Surrey & Kingston</p>
-  </section>  <section class="services" id="services">
-    <div class="card">
-      <h3>Gas Safety Certificate</h3>
-      <a href="https://buy.stripe.com/00wdRaaNxfxPgnk3KT2B205">Book £120</a>
+import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button"; import { Phone, Mail, MapPin, Wrench, Flame, Clock } from "lucide-react"; import { motion } from "framer-motion";
+
+export default function SouthernHeatingSolutions() { return ( <main className="bg-white text-black"> {/* Hero Section */} <section className="bg-gradient-to-r from-blue-900 to-blue-600 text-white py-20 px-6 text-center"> <motion.h1 className="text-5xl font-bold mb-4" initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }}>PRECISION. HEAT. TRUSTED. FLOW.</motion.h1> <p className="text-lg mb-6">Southern Heating Solutions | Surrey & Kingston | 24/7 Callouts</p> <Button className="text-lg px-6 py-3">Request a Quote</Button> </section>
+
+{/* Services */}
+  <section className="py-16 px-6 grid md:grid-cols-3 gap-8 text-center">
+    <Card className="shadow-xl">
+      <CardContent className="p-6">
+        <Wrench className="mx-auto mb-4" size={40} />
+        <h2 className="text-xl font-bold mb-2">General Plumbing</h2>
+        <p>Reliable plumbing solutions, repairs, and installations across Surrey & Kingston.</p>
+      </CardContent>
+    </Card>
+    <Card className="shadow-xl">
+      <CardContent className="p-6">
+        <Flame className="mx-auto mb-4" size={40} />
+        <h2 className="text-xl font-bold mb-2">Gas Services</h2>
+        <p>Certified for gas work. Gas Safety Certificates (CP12), boiler services & more.</p>
+      </CardContent>
+    </Card>
+    <Card className="shadow-xl">
+      <CardContent className="p-6">
+        <Clock className="mx-auto mb-4" size={40} />
+        <h2 className="text-xl font-bold mb-2">24/7 Emergency Callouts</h2>
+        <p>Fast, dependable emergency plumbing and heating response – day or night.</p>
+      </CardContent>
+    </Card>
+  </section>
+
+  {/* Pricing Section */}
+  <section className="bg-gray-100 py-16 px-6">
+    <h2 className="text-3xl font-bold text-center mb-12">Popular Services & Pricing</h2>
+    <div className="grid md:grid-cols-3 gap-8">
+      <Card className="shadow-lg">
+        <CardContent className="p-6 text-center">
+          <h3 className="text-2xl font-semibold mb-2">Gas Safety Certificate</h3>
+          <p className="mb-4">CP12 Landlord Certificate</p>
+          <p className="text-xl font-bold mb-4">£120</p>
+          <Button asChild><a href="https://buy.stripe.com/eVqfZi2h1etL2wu5T12B201">Book Now</a></Button>
+        </CardContent>
+      </Card>
+      <Card className="shadow-lg">
+        <CardContent className="p-6 text-center">
+          <h3 className="text-2xl font-semibold mb-2">Boiler Installation</h3>
+          <p className="mb-4">Full swap with expert fitting</p>
+          <p className="text-xl font-bold mb-4">£1,800</p>
+          <Button asChild><a href="https://buy.stripe.com/7sYdRa8Fpadvc740yH2B200">Book Now</a></Button>
+        </CardContent>
+      </Card>
+      <Card className="shadow-lg">
+        <CardContent className="p-6 text-center">
+          <h3 className="text-2xl font-semibold mb-2">Sink Installation</h3>
+          <p className="mb-4">Includes plumbing, sealing, fittings</p>
+          <p className="text-xl font-bold mb-4">£140</p>
+          <Button asChild><a href="https://buy.stripe.com/bJebJ22h10CV9YWftB2B203">Book Now</a></Button>
+        </CardContent>
+      </Card>
     </div>
-    <div class="card">
-      <h3>Boiler Service</h3>
-      <a href="https://buy.stripe.com/5kQ9AU5tdclD2wu2GP2B206">Book £90</a>
+  </section>
+
+  {/* Contact Section */}
+  <section className="py-16 px-6 text-center">
+    <h2 className="text-3xl font-bold mb-6">Contact & Coverage</h2>
+    <p className="mb-4">Serving: Surrey, Kingston upon Thames & nearby areas</p>
+    <div className="flex flex-col md:flex-row justify-center gap-6 text-lg">
+      <p><Phone className="inline mr-2" /> 24/7 Phone: <a href="tel:+447000000000" className="underline">+44 7000 000000</a></p>
+      <p><Mail className="inline mr-2" /> Email: <a href="mailto:info@southernheatingsolutions.co.uk" className="underline">info@southernheatingsolutions.co.uk</a></p>
+      <p><MapPin className="inline mr-2" /> Registered in England & Wales</p>
     </div>
-    <div class="card">
-      <h3>Boiler Repair Diagnosis</h3>
-      <a href="https://buy.stripe.com/dRm9AU6xhbhz8US4OX2B208">Book £75</a>
-    </div>
-    <div class="card">
-      <h3>Sink Installation</h3>
-      <a href="https://buy.stripe.com/bJebJ22h10CV9YWftB2B203">Book £140</a>
-    </div>
-    <div class="card">
-      <h3>Tap Replacement</h3>
-      <a href="https://buy.stripe.com/fZu9AUaNx4TbfjgftB2B207">Book £85</a>
-    </div>
-    <div class="card">
-      <h3>Thermostat Installation</h3>
-      <a href="https://buy.stripe.com/7sY4gA7BlfxP4ECbdl2B204">Book £120</a>
-    </div>
-    <div class="card">
-      <h3>Radiator Install / Replacement</h3>
-      <a href="https://buy.stripe.com/3cIaEY7Bl0CVc741CL2B202">Book</a>
-    </div>
-    <div class="card">
-      <h3>New Boiler Installation</h3>
-      <a href="https://buy.stripe.com/7sYdRa8Fpadvc740yH2B200">Book £1800</a>
-    </div>
-    <div class="card">
-      <h3>Full Central Heating</h3>
-      <a href="https://buy.stripe.com/eVqfZi2h1etL2wu5T12B201">Book £3500</a>
-    </div>
-  </section>  <section class="map" id="contact">
-    <h2>Find Us</h2>
-    <iframe
-      src="https://www.google.com/maps/embed/v1/place?q=Kingston+upon+Thames,+UK&key=YOUR_GOOGLE_MAPS_API_KEY"
-      width="100%"
-      height="300"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </section>  <footer>
-    &copy; 2025 Southern Heating Solutions. All rights reserved.
+  </section>
+
+  {/* Footer */}
+  <footer className="bg-blue-900 text-white py-6 px-6 text-center">
+    <p>© 2025 Southern Heating Solutions Ltd. All rights reserved.</p>
+    <p>Company Number: [INSERT]</p>
   </footer>
-</body>
-</html>
+</main>
+
+); }
+
