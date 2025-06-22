@@ -2,181 +2,168 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Southern Heating Solutions | Precision. Heat. Trusted. Flow.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Southern Heating Solutions - 24/7 Plumbing & Gas Engineers serving Surrey & Kingston. Book certified services online with confidence." />
+  <title>Southern Heating Solutions</title>
+  <link rel="icon" href="/favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/lucide@latest" rel="stylesheet" />
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Montserrat', sans-serif;
-    }
     body {
-      background: linear-gradient(to bottom right, #001f3f, #005b96);
-      color: #fff;
-      overflow-x: hidden;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #111;
     }
     header {
-      position: sticky;
-      top: 0;
-      background-color: rgba(0, 0, 0, 0.85);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      background: #002f6c;
+      color: white;
       padding: 1rem 2rem;
-      z-index: 1000;
-      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
     header img {
       height: 50px;
     }
-    header nav a {
-      color: #fff;
+    nav a {
+      color: white;
+      margin-left: 20px;
       text-decoration: none;
-      margin-left: 2rem;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    header nav a:hover {
-      color: #00bfff;
     }
     .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      background: linear-gradient(to right, #0056b3, #007bff);
+      color: white;
       text-align: center;
-      padding: 6rem 2rem;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      letter-spacing: 2px;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: #dcdcdc;
-      margin-bottom: 3rem;
-    }
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
       padding: 3rem 1rem;
     }
-    .service-card {
-      background: #fff;
-      color: #000;
-      border-radius: 15px;
-      width: 280px;
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       padding: 1.5rem;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
       text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    .card h3 {
+      margin: 0.5rem 0;
     }
-    .service-card h3 {
-      margin-bottom: 0.8rem;
-      color: #005b96;
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
     }
-    .service-card button {
-      background: #0074D9;
+    .card a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #0056b3;
       color: white;
-      border: none;
-      padding: 0.8rem 1.2rem;
-      border-radius: 30px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
+      text-decoration: none;
+      border-radius: 8px;
     }
-    .service-card button:hover {
-      background: #00bfff;
+    .trust {
+      background: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .trust img {
+      margin: 1rem;
+      height: 40px;
+    }
+    .contact {
+      background: #002f6c;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
     }
     .footer {
-      background: #001f3f;
+      background: #001f4d;
+      color: white;
+      padding: 1rem;
       text-align: center;
-      padding: 2rem;
-      color: #ccc;
-      font-size: 0.9rem;
     }
     iframe {
+      border: 0;
       width: 100%;
       height: 300px;
-      border: none;
-      margin-top: 2rem;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://southernheatingsolutions.co.uk/logo.png" alt="Southern Heating Solutions Logo">
+    <img src="/logo.png" alt="Southern Heating Solutions Logo">
     <nav>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
-  <section class="hero">
+  </header>  <div class="hero">
     <h1>PRECISION. HEAT. TRUSTED. FLOW.</h1>
     <p>24/7 Plumbing & Heating Experts in Surrey & Kingston</p>
-  </section>
-  <section class="services" id="services">
-    <div class="service-card">
-      <h3>Gas Safety Certificate (CP12)</h3>
-      <p>£120</p>
-      <a href="https://buy.stripe.com/00wdRaaNxfxPgnk3KT2B205"><button>Book Now</button></a>
+  </div>  <section id="services" class="grid">
+    <div class="card">
+      <h3>Gas Safety Certificate</h3>
+      <p>Book your landlord gas check (CP12) online.</p>
+      <a href="https://buy.stripe.com/00wdRaaNxfxPgnk3KT2B205">Book £120</a>
     </div>
-    <div class="service-card">
+    <div class="card">
       <h3>Boiler Service</h3>
-      <p>£90</p>
-      <a href="https://buy.stripe.com/5kQ9AU5tdclD2wu2GP2B206"><button>Book Now</button></a>
+      <p>Annual boiler service to keep your system safe and efficient.</p>
+      <a href="https://buy.stripe.com/5kQ9AU5tdclD2wu2GP2B206">Book £90</a>
     </div>
-    <div class="service-card">
-      <h3>Boiler Swap</h3>
-      <p>£1,800</p>
-      <a href="https://buy.stripe.com/7sYdRa8Fpadvc740yH2B200"><button>Book Now</button></a>
+    <div class="card">
+      <h3>Boiler Repair Diagnosis</h3>
+      <p>Initial diagnosis and fault finding. Repair quoted separately.</p>
+      <a href="https://buy.stripe.com/dRm9AU6xhbhz8US4OX2B208">Book £75</a>
     </div>
-    <div class="service-card">
-      <h3>Central Heating Install</h3>
-      <p>£3,500</p>
-      <a href="https://buy.stripe.com/eVqfZi2h1etL2wu5T12B201"><button>Book Now</button></a>
-    </div>
-    <div class="service-card">
-      <h3>Tap Replacement</h3>
-      <p>£85</p>
-      <a href="https://buy.stripe.com/fZu9AUaNx4TbfjgftB2B207"><button>Book Now</button></a>
-    </div>
-    <div class="service-card">
-      <h3>Sink Installation</h3>
-      <p>£140</p>
-      <a href="https://buy.stripe.com/bJebJ22h10CV9YWftB2B203"><button>Book Now</button></a>
-    </div>
-    <div class="service-card">
+    <div class="card">
       <h3>Thermostat Installation</h3>
-      <p>£120</p>
-      <a href="https://buy.stripe.com/7sY4gA7BlfxP4ECbdl2B204"><button>Book Now</button></a>
+      <p>Standard or smart thermostat installation.</p>
+      <a href="https://buy.stripe.com/7sY4gA7BlfxP4ECbdl2B204">Book £120</a>
     </div>
-    <div class="service-card">
+    <div class="card">
+      <h3>Sink Installation</h3>
+      <p>Install kitchen or bathroom sink – labour only.</p>
+      <a href="https://buy.stripe.com/bJebJ22h10CV9YWftB2B203">Book £140</a>
+    </div>
+    <div class="card">
+      <h3>Tap Replacement</h3>
+      <p>Replace your tap in the kitchen or bathroom.</p>
+      <a href="https://buy.stripe.com/fZu9AUaNx4TbfjgftB2B207">Book £85</a>
+    </div>
+    <div class="card">
       <h3>Radiator Install</h3>
-      <p>£140</p>
-      <a href="https://buy.stripe.com/3cIaEY7Bl0CVc741CL2B202"><button>Book Now</button></a>
+      <p>New radiator fitting or like-for-like replacement.</p>
+      <a href="https://buy.stripe.com/3cIaEY7Bl0CVc741CL2B202">Book £140</a>
     </div>
-    <div class="service-card">
-      <h3>Boiler Diagnosis</h3>
-      <p>£75</p>
-      <a href="https://buy.stripe.com/dRm9AU6xhbhz8US4OX2B208"><button>Book Now</button></a>
+    <div class="card">
+      <h3>Boiler Swap / Install</h3>
+      <p>Modern energy-efficient boiler installation service.</p>
+      <a href="https://buy.stripe.com/7sYdRa8Fpadvc740yH2B200">Book £1,800</a>
     </div>
-  </section>
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9943.045680897398!2d-0.29695885706300207!3d51.41372866743637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760895165a3dfb%3A0xb7cdbfc8ed969fdf!2sKingston%20upon%20Thames%2C%20UK!5e0!3m2!1sen!2suk!4v1680888888888!5m2!1sen!2suk" 
-    allowfullscreen="" loading="lazy">
-  </iframe>
-  <footer class="footer" id="contact">
-    &copy; 2025 Southern Heating Solutions | info@southernheatingsolutions.co.uk | 24/7 Callouts | Surrey & Kingston
-  </footer>
-</body>
-</html>
+    <div class="card">
+      <h3>Full Central Heating</h3>
+      <p>Full system fitted – boiler, radiators, controls, pipework.</p>
+      <a href="https://buy.stripe.com/eVqfZi2h1etL2wu5T12B201">Book £3,500</a>
+    </div>
+  </section>  <section class="trust">
+    <h2>Book With Confidence</h2>
+    <img src="/visa.png" alt="Visa">
+    <img src="/mastercard.png" alt="MasterCard">
+    <img src="/stripe.png" alt="Stripe Verified">
+    <p>Fully qualified • Gas Safe Registered • Insured</p>
+  </section>  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@southernheatingsolutions.co.uk</p>
+    <p>Phone: 07400 000000</p>
+    <p>Surrey & Kingston Based</p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m
