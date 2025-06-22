@@ -1,73 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Southern Heating Solutions</title>
-  <link rel="icon" href="/favicon.png" type="image/png" />
   <style>
-    body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #222; }
-    header { background: #002e5d; color: #fff; padding: 40px 20px; text-align: center; }
-    header h1 { margin: 0; font-size: 2.5rem; }
-    header p { margin: 10px 0; font-size: 1.2rem; font-style: italic; }
-    .cta-buttons a { display: inline-block; margin: 10px; padding: 12px 25px; background: #007bff; color: white; text-decoration: none; border-radius: 6px; }
-    section { padding: 40px 20px; max-width: 900px; margin: auto; }
-    h2 { color: #002e5d; }
-    ul.service-links { list-style-type: none; padding: 0; }
-    ul.service-links li { margin: 10px 0; }
-    ul.service-links a { text-decoration: none; color: #0070f3; font-weight: bold; }
-    ul.service-links a:hover { color: #0051a3; }
-    .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin: 10px 0; }
-    .contact-form button { padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; }
-    iframe { width: 100%; height: 600px; border: none; }
-    footer { background: #002e5d; color: white; text-align: center; padding: 20px; }
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #002d5a;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header img {
+      height: 60px;
+    }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      background: linear-gradient(135deg, #003c7e, #005faa);
+      color: white;
+      padding: 4rem 2rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card h3 {
+      margin-top: 1rem;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #005faa;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #002d5a;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 1rem;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Southern Heating Solutions</h1>
-    <p>"PRECISION. HEAT. TRUSTED. FLOW."</p>
-    <div class="cta-buttons">
-      <a href="#services">Our Services</a>
-      <a href="#contact">Request a Quote</a>
+    <img src="/logo.png" alt="Southern Heating Solutions Logo">
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>  <section class="hero">
+    <h1>PRECISION. HEAT. TRUSTED. FLOW.</h1>
+    <p>24/7 Plumbing & Heating Experts in Surrey & Kingston</p>
+  </section>  <section class="services" id="services">
+    <div class="card">
+      <h3>Gas Safety Certificate</h3>
+      <a href="https://buy.stripe.com/00wdRaaNxfxPgnk3KT2B205">Book £120</a>
     </div>
-  </header>
-
-  <section id="services">
-    <h2>Book a Service</h2>
-    <ul class="service-links">
-      <li><a href="https://buy.stripe.com/00wdRaaNxfxPgnk3KT2B205" target="_blank">Gas Safety Certificate (CP12) – £120</a></li>
-      <li><a href="https://buy.stripe.com/5kQ9AU5tdclD2wu2GP2B206" target="_blank">Boiler Service – £90</a></li>
-      <li><a href="https://buy.stripe.com/7sYdRa8Fpadvc740yH2B200" target="_blank">Boiler Swap / New Boiler Installation – £1,800</a></li>
-      <li><a href="https://buy.stripe.com/eVqfZi2h1etL2wu5T12B201" target="_blank">Full Central Heating Installation – £3,500</a></li>
-      <li><a href="https://buy.stripe.com/3cIaEY7Bl0CVc741CL2B202" target="_blank">Radiator Install or Replacement – £140</a></li>
-      <li><a href="https://buy.stripe.com/7sY4gA7BlfxP4ECbdl2B204" target="_blank">Thermostat Installation (inc. Smart) – £120</a></li>
-      <li><a href="https://buy.stripe.com/fZu9AUaNx4TbfjgftB2B207" target="_blank">Tap Replacement – £85</a></li>
-      <li><a href="https://buy.stripe.com/bJebJ22h10CV9YWftB2B203" target="_blank">Sink Installation – £140</a></li>
-      <li><a href="https://buy.stripe.com/dRm9AU6xhbhz8US4OX2B208" target="_blank">Boiler Repair Diagnosis – £75</a></li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Request a Quote</h2>
-    <form action="https://formspree.io/f/xjkrabkd" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <input type="tel" name="phone" placeholder="Your Phone" />
-      <textarea name="message" placeholder="Describe your issue..." required></textarea>
-      <input type="text" name="_gotcha" style="display:none">
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <section>
-    <h2>Our Coverage Area</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19845.5216043553!2d-0.29585815250838296!3d51.41141784833765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760796d10dbad1%3A0xf28dbfca0eae2a96!2sKingston%20upon%20Thames!5e0!3m2!1sen!2suk!4v1718965438000!5m2!1sen!2suk" allowfullscreen></iframe>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Southern Heating Solutions – All Rights Reserved</p>
-    <p>info@southernheatingsolutions.co.uk | WhatsApp: +447912345678</p>
+    <div class="card">
+      <h3>Boiler Service</h3>
+      <a href="https://buy.stripe.com/5kQ9AU5tdclD2wu2GP2B206">Book £90</a>
+    </div>
+    <div class="card">
+      <h3>Tap Replacement</h3>
+      <a href="https://buy.stripe.com/fZu9AUaNx4TbfjgftB2B207">Book £85</a>
+    </div>
+    <div class="card">
+      <h3>Sink Installation</h3>
+      <a href="https://buy.stripe.com/bJebJ22h10CV9YWftB2B203">Book £140</a>
+    </div>
+    <div class="card">
+      <h3>Radiator Installation</h3>
+      <a href="https://buy.stripe.com/3cIaEY7Bl0CVc741CL2B202">Book</a>
+    </div>
+    <div class="card">
+      <h3>Full Central Heating</h3>
+      <a href="https://buy.stripe.com/eVqfZi2h1etL2wu5T12B201">Book £3,500</a>
+    </div>
+    <div class="card">
+      <h3>Thermostat Install (Smart)</h3>
+      <a href="https://buy.stripe.com/7sY4gA7BlfxP4ECbdl2B204">Book £120</a>
+    </div>
+    <div class="card">
+      <h3>Boiler Swap / New</h3>
+      <a href="https://buy.stripe.com/7sYdRa8Fpadvc740yH2B200">Book £1,800</a>
+    </div>
+    <div class="card">
+      <h3>Boiler Repair Diagnosis</h3>
+      <a href="https://buy.stripe.com/dRm9AU6xhbhz8US4OX2B208">Book £75</a>
+    </div>
+  </section>  <footer id="contact">
+    <p>Email: info@southernheatingsolutions.co.uk</p>
+    <p>Phone: 24/7 Emergency Callouts</p>
+    <p>Serving: Surrey & Kingston upon Thames</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39730.11133414068!2d-0.3136!3d51.4123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487608a20c08d4d3%3A0xceb8aa6fa6d3db46!2sKingston%20upon%20Thames!5e0!3m2!1sen!2suk!4v1687261377427!5m2!1sen!2suk"></iframe>
+    <p>&copy; 2025 Southern Heating Solutions</p>
   </footer>
 </body>
 </html>
